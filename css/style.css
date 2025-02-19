@@ -1,0 +1,748 @@
+/* Reset CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Colores Generales */
+:root {
+    --main-color: blue; /* Color principal por defecto (tema claro) */
+    --background-color: #FCE7C8; /* Fondo por defecto */
+    --text-color: rgb(255, 255, 255); /* Texto por defecto */
+}
+
+
+/* Body */
+
+body{
+    margin: 0;
+    background-color: var(--background-color);
+}
+
+
+/* Footer */
+
+footer{
+    background-color: #ff901a;
+    padding: 15px 0px 15px 0px;
+}
+
+footer h4{
+    font-size: 45px;
+    text-align: center;
+    padding: 5px 0px 5px 0px;
+    border-radius: 25px;
+    text-decoration: underline rgb(55, 0, 255) 4px;
+    background-color: #c4fc43;
+    width: 250px;
+    margin: 0px auto 10px auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 200;
+}
+footer p{
+    text-align: center;
+    padding: 0px 0px 5px 0px;
+    background-color: #FADA7A;
+    width: 350px;
+    display: block;
+    margin: 0px auto 0px auto;
+    border-radius: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
+    font-size: 25px;
+}
+footer a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin: 0px auto 10px auto;
+    display: block;
+    width: 350px;
+    text-align: center;
+    font-size: 25px;
+}
+
+
+
+/* Página 1 */
+
+
+@media (min-width: 992px){
+    .nav-brand-logo-per img{
+        margin: 0px 0px 0px 50px;
+    }
+}
+
+.navbar-nav-per{
+    justify-content: flex-end;
+    font-size: 20px;
+    text-align: center;
+    border-top: 2px solid orange;
+    
+}
+
+@media (min-width: 992px){
+    .navbar-nav-per{
+        margin: 0px 50px 0px 0px;
+        border-top: 0;
+    }
+}
+
+
+
+/* Estilos de la cabecera */
+.bienvenida{
+    color: var(--main-color);
+    font-family: "Poppins", serif;
+    text-align: center;
+    padding: 50px 0px 100px 0px;
+}
+
+.bienvenida h1{
+    font-size: 45px;
+    color: rgb(55, 0, 255);
+    text-decoration: underline 4px;
+    padding: 0px 0px 15px 0px;
+}
+
+.bienvenida h3{
+    font-size: 25px;
+    text-decoration: underline 4px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(0, 255, 157);
+}
+
+.bienvenida img{
+    width: 90%;
+    height: auto;
+    margin: 70px auto 25px auto;
+    border-radius: 25px;
+}
+
+@media (min-width: 662px){ /* Corrección aquí */
+    .bienvenida img{
+        width: 70%;
+        height: auto; /* Se recomienda mantener auto para evitar distorsión */
+    }
+}
+
+@media (min-width: 992px){ /* Corrección aquí */
+    .bienvenida img{
+        width: 40%;
+        height: auto; /* Se recomienda mantener auto para evitar distorsión */
+    }
+}
+
+
+/* Fin de la cabecera */
+
+
+/* Estilos de la sección de recetas */
+
+/* recetas populares */
+.recetas{
+    color: var(--text-color); /* Color del texto de las recetas */
+    font-family: 'Courier New', Courier, monospace; /* Fuente */
+    background-color: rgb(245, 215, 179); /* Color de fondo de la sección */ 
+    padding: 100px 25px 100px 25px; /* Espaciado interior de la sección */
+}	
+
+.recetas h2{
+    color: black;
+    font-size: 50px;
+    text-align: center;
+    padding: 0px 0px 15px 0px;
+}
+
+.recetas p{
+    font-size: 18px;
+    text-align: center;
+    color: black;
+    padding: 0px 0px 25px 0px;
+}
+
+@media (width < 600px) {
+
+    .recetas h2{
+        color: black;
+        font-size: 35px;
+        text-align: center;
+        padding: 0px 0px 15px 0px;
+    }
+    
+    .recetas p{
+        font-size: 14px;
+        text-align: center;
+        color: black;
+        padding: 0px 0px 25px 0px;
+    }
+    
+}
+
+
+
+
+/* Tabla */
+.recetas table{
+    margin: 0 auto;
+    color: black;
+    border-spacing: 10px; 
+}
+
+.recetas th{ 
+    color: black;
+    font-size: 15px;
+    background-color: aquamarine;
+    text-align: center;
+    padding: 15px 22px 15px 22px;
+    border-radius: 50px;
+}
+.recetas td{
+    color: black;
+    font-size: 15px;
+    background-color: rgb(235, 173, 80); /* Aplica a toda la tabla */
+    padding: 15px 22px 15px 22px;
+    border-radius: 10px;
+}
+
+.recetas td.recename { /* Aplica solo a la clase recename, que es la que contiene el nombre de la receta */
+    background-color: sandybrown;
+}
+
+
+
+
+/* Fin de recetas */
+
+
+/* Noticias */
+
+.noticias{
+    padding: 100px 0px 100px 0px;
+    color: rgb(255, 255, 255);
+    text-align: center; 
+}
+
+.noticias h2{
+    font-size: 50px; /* Título */
+    padding: 0px 0px 20px 0px;
+}
+
+.noticias p{
+    padding: 0px 0px 25px 0px; /* Aplica a todos los párrafos de la sección */
+    font-size: 25px;
+}
+
+.noticias h3{
+    font-size: 45px; /* Subtítulo */
+    padding: 50px 0px 0px 0px;
+}
+
+
+.noticias ul, .noticias ol{ /* Aplica a todas las listas de la sección */
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    padding: 5px 0px 15px 0px;
+    list-style: none;
+}
+
+@media (width < 1024px){
+
+    .noticias p{
+        padding: 0px 0px 25px 0px; /* Aplica a todos los párrafos de la sección */
+        font-size: 20px;
+    }
+        
+    
+    .noticias ul, .noticias ol{ /* Aplica a todas las listas de la sección */
+        font-size: 25px;
+        color: rgb(0, 0, 0);
+        padding: 5px 0px 15px 0px;
+    }
+    
+
+}
+
+
+
+
+/* Página 2 */
+
+/* Grid */
+
+.body-p2{
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "sidebar main main"
+    "footer footer footer";
+}
+
+.menu-all-p2{
+    grid-area: header;
+}
+
+.barra-categorias-p2{
+    grid-area: sidebar;
+}
+
+.main-p2{
+    grid-area: main;
+}
+
+.footer{
+    grid-area: footer;
+}
+
+/* Menú Categorías */
+
+.categorias-p2{ /* Categorías */
+    font-family: 'Courier New', Courier, monospace;
+    margin: 25px;
+    padding: 15px 15px 15px 15px;
+    background-color: #c4fc43;
+    border-radius: 25px 25px 25px 25px;
+    width: 20vw;
+    height: 65vh;
+}
+
+.categorias-p2 h1{ /* Título */
+    font-size: 35px;
+    text-align: center;
+    padding: 0px 0px 25px 0px;
+}
+
+.categorias-p2 nav{ /* Menú */
+    text-align: center;
+    padding: 0px 0px 15px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.categorias-p2 ul{ /* Lista */
+    list-style: none;
+}
+
+.categorias-p2 a{ /* Enlaces */
+
+    text-decoration: none; /* Quitamos el subrayado de los enlaces */
+    color: rgb(255, 255, 255);   /* Color de los enlaces */
+    font-size: 20px;    /* Tamaño del texto de los enlaces */
+    font-weight: bold; /* Grosor del texto de los enlaces */
+    background-color: rgb(255, 27, 27);   /* Color de fondo de los enlaces */
+    margin: 10px 0px;
+    padding: 5px 5px 5px 5px;   /* Espaciado interior de los enlaces */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;    /* Cambiamos el cursor al pasar por encima */   
+}
+
+.categorias-p2 a:hover{ /* Efecto hover */
+    margin: 10px 0px;
+    background-color: rgb(255, 255, 255); /* Cambiamos el color de fondo al pasar por encima */
+    color: black;  /* Cambiamos el color del texto al pasar por encima */
+    text-decoration: underline; /* Subrayamos el texto al pasar por encima */
+    text-underline-offset: 4px; /* Añadimos un margen al subrayado */
+    text-decoration-thickness: 2px;  /* Grosor del subrayado */
+}
+
+/* grid barra lat */
+
+.barra-lateral-1-p2{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(8vw, 1fr));
+    grid-template-rows: repeat(2, 80px);
+    gap: 5px;
+    margin: 25px 0px;
+    justify-content: center;
+    
+}
+
+.barra-lateral-2-p2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    border-radius: 25px;
+    
+    
+}
+
+.barra-lateral-2-p2 img{
+    width: 60px;
+    
+}
+
+
+
+
+/* historia de las recetas más conocidas */
+
+.historia-p2 h2{ /* Título */
+    font-size: 40px;
+    text-align: center;
+    text-decoration: underline 3px;
+    padding: 25px 0px 15px 0px;
+}
+
+.historia-p2 ul{ /* Lista */
+    width: 70%;
+    margin: 0 auto;
+    list-style: none;
+}
+
+.historia-p2 h3{ /* Subtítulo */
+    font-size: 25px;
+    text-align: center;
+    padding: 15px 0px 20px 0px;
+}
+
+.historia-p2 p{  /* Párrafos */
+    font-size: 18px;
+    text-align: justify;
+    padding: 0px 0px 20px 0px;
+}
+
+
+
+
+
+
+
+
+/* Página 3 */
+
+
+/* Introduccion a la página 3 */
+
+.consejos-p3{ /* Consejos */
+
+    margin: 50px 0px 0px 0px;
+    background-color: rgb(245, 215, 179); /* Color de fondo de la sección */ 
+    padding: 70px 25px 70px 25px; /* Espaciado interior de la sección */
+}
+
+.consejos-p3 h1{ /* Título */
+    font-family: "Poppins", serif;
+    font-size: 35px;
+    text-align: center;
+    padding: 0;
+}
+
+.consejos-p3 p{ /* Párrafos */
+    font-size: 18px;
+    text-align: center;
+    padding: 5px 0px 5px 0px;
+}
+
+.consejos-p3 img{ /* Imagen */
+    width: 700px;
+    height: 400px;
+    display: block;
+    margin: 50px auto 50px auto;
+    border-radius: 25px;
+}
+
+
+/* Tabla */
+
+.tabla-consejos-p3 { /* Tabla */
+    width: 800px;   
+    margin: 0 auto;
+    padding: 0px 0px 72px 0px;
+}
+
+.tabla-consejos-p3 h2 { /* Títulos */
+    font-size: 23px;
+    font-family: "Poppins", serif;
+    text-align: center;
+    margin: 0;
+    padding: 25px 0px 10px 0px;
+}
+
+.tabla-consejos-p3 p{ /* Párrafos */
+    color: rgb(14, 14, 102);
+    font-size: 18px;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+/* Articulos de Cocina */
+
+.articulos-cocina-p3{ /* Artículos de Cocina */
+    padding: 100px 0px 100px 0px;
+    background-color: #FADA7A;
+    text-align: center;
+}
+
+.articulos-cocina-p3 h2{  /* Artículos de Cocina Título */
+    font-size: 50px;
+    text-decoration: underline 3px;
+    padding: 0px 0px 20px 0px;
+}
+
+.articulos-cocina-p3 h3{ /* Subtítulos */
+    padding: 15px 0px 10px 0px;
+    font-size: 25px;
+    text-decoration: underline 2px;
+}
+
+.articulos-cocina-p3 li{ /* Datos */
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    padding: 5px 0px 10px 0px;
+    background-color: #FCE7C8;
+    width: 400px;
+    margin: 0px auto 5px auto;
+    list-style: none;
+    border-radius: 25px;
+}
+
+
+
+/* Página 4 */
+
+/* font-family: "Sedgwick Ave Display", serif; */ 
+
+
+.main-p4{
+    margin: 20px;
+}
+
+.icons-p4{
+    padding: 0;
+}
+
+
+.inicio-p4{
+    display: block;
+    height: 200px;
+    align-content: center;
+    padding: 50px 0px 50px 350px;
+}
+
+.inicio-p4 h1{
+    font-size: 86px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 100;
+    color: black;
+}
+
+
+.icons-1-p4{
+    background-color: #ffffff;
+    margin: 0px 80px;
+    padding: 50px 0px;
+    border-radius: 25px;
+}
+
+
+.icons-2-p4{
+    font-family: 'Courier New', Courier, monospace;
+    margin: 25px 0px 20px 170px;
+}
+
+
+.icons-2-p4 samp{
+    font-size: 16px;
+}
+
+
+.icons-2-p4 h2{
+    font-size: 45px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 10px 0px;
+}
+
+
+.icons-3-p4{
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+.icons-4-p4{
+    padding: 25px;
+    margin: 20px;
+    width: 307px;
+    height: auto;
+    background-color: wheat;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0px 0px 40px -9px black;
+    border: 1px solid black;
+}
+
+
+.icons-4-p4 img{
+    width: 40%;
+    height: auto;
+    background-color: #e09900;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+/* Formulario */
+
+.form-p4{
+    background-color: #c4fc43;
+    padding: 25px;
+    display: grid;
+    width: 500px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4 , 30px) 40px;
+    column-gap: 10px;
+    row-gap: 10px;
+    grid-template-areas: 
+    "nombre apellido"
+    "input-n input-a"
+    "email form"
+    "input-e form-input"
+    "form-imput-1 d";
+}
+
+/* Conexiónes */
+
+.nombre{ /* Nombre */
+    grid-area: nombre;
+}
+
+.input-n{ /* Input Nombre */
+    grid-area: input-n;
+}
+
+
+.apellido{ /* Apellido */
+    grid-area: apellido;
+}
+
+.input-a{ /* Input Apellido */
+    grid-area: input-a;
+}
+
+ 
+.email{ /* Email */
+    grid-area: email;
+}
+
+.input-e{ /* Input Email */
+    grid-area: input-e;
+}
+
+
+.form{ /* Verificación */
+    grid-area: form;
+}
+
+.form-input{ /* Input Verificación */
+    grid-area: form-input;
+}
+
+
+.form-imput-1{ /* Enviar */
+    grid-area: form-imput-1;
+    grid-column: 1 / 3;
+}
+
+
+
+
+/* Casi footer */
+
+.info-p4{
+    margin: 50px auto;
+    width: 1200px;
+}
+
+.info-p4 h2{
+    font-size: 50px;
+    text-align: center;
+    text-decoration: underline;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.info-p4 p{
+    text-align: center;
+    font-size: 17px;font-family: 'Courier New', Courier, monospace;
+}
+
+.info-p4 img{
+    display: block;
+    margin: 15px auto 0px auto;
+    width: 700px;
+    height: auto;
+    
+}
+
+
+/* Página 5 */
+
+
+/* Introduccion a la página 5 */
+
+.historia-p5{ /* Historia */
+    text-align: center;
+    padding: 25px 0px 25px 0px;
+    margin: 0px 40px 0px 40px;
+}
+
+.historia-p5 h1{ /* Título */
+    font-size: 40px;
+    text-decoration: underline 2px;
+    padding: 0px 0px 20px 0px;
+}
+
+.historia-p5 p{ /* Párrafo */
+    font-size: 17px;
+    text-align: justify;
+    padding: 0px 0px 20px 0px;
+}
+
+/* Nuestro Equipo */
+
+.equipo-p5{ /* Equipo */
+    padding: 50px 0px 50px 0px;
+    background-color: #FADA7A;
+    text-align: center;
+}
+
+.equipo-p5 h2{ /* Título */
+    font-size: 72px;
+    font-family: "Poppins", serif;
+    font-weight: 100;
+    font-style: italic;
+    text-decoration: underline 1px;
+    padding: 0px 0px 20px 0px;
+}
+
+.equipo-p5 p{ /* Párrafo */
+    font-family: "Poppins", serif; 
+    font-size: 20px; 
+    padding: 0px 0px 25px 0px; 
+}
+
+.equipo-p5 table {  /* Tabla */
+    margin: 25px auto 25px auto; /* Margen */
+}
+
+.equipo-p5 tr { /* Fila */
+    background-color: #FCE7C8; /* Color de fondo */
+}
+.equipo-p5 th{ /* Cabecera */
+    padding: 15px 10px 15px 10px; /* Espaciado interior de las celdas */
+    background-color: brown;  /* Color de fondo */
+    font-family: "Poppins", serif; /* Fuente */
+    font-size: 25px; /* Tamaño de la fuente */
+    font-weight: 800; /* Peso de la fuente */
+    width: 200px; /* Ancho de las celdas */
+}
+
+.equipo-p5 td{ /* Datos */
+    font-family: "Poppins", serif; /* Fuente */
+    font-size: 15px; /* Tamaño de la fuente */
+    font-weight: 300; /* Peso de la fuente */
+    padding: 15px 10px 15px 10px; /* Espaciado interior de las celdas */
+    width: 200px; /* Ancho de las celdas */
+}

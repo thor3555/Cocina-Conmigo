@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Título -->
+    <title>Cocina Conmigo</title>
+    <!-- Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+    <header> <!-- Encabezado -->
+
+      <nav class="navbar navbar-expand-lg bg-warning-subtle">
+
+        <div class="container-fluid">
+
+          <!-- Logo -->
+          <a class="navbar-brand nav-brand-logo-per" href="#">
+            <img src="img/cocina.svg" alt="" width="80" height="80">
+          </a>
+
+          <!-- Botón Movil -->
+          <button class="navbar-toggler bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <img src="img/button-cerrar-ico.png" width="50px" height="50px" alt="">
+          </button>
+
+          <!-- Menú -->
+          <div class="collapse navbar-collapse navbar-nav-per" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="#">Features</a>
+              <a class="nav-link" href="#">Pricing</a>
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </div>
+          </div>
+
+        </div>
+      </nav>
+    </header>
+
+    <main class="bg-warning main">
+        
+      <section class="container-fluid bienvenida"> <!-- Bienvenida -->
+            <h1>Bienvenid@ a la familia Cocina Conmigo</h1>
+            <h3>Aqui encontraras todo tipo de recetas y consejos sobre cocina</h3>
+            <img src="img/pasteleria.jpg" alt="Foto de muffins decorados con crema y cerezas">
+      </section>
+
+
+      <section class="container recetas">   <!-- Recetas Populares -->
+            <h2>Recetas Populares</h2>
+            <p>Esta es una liste de las recetas más valoradas de este 2024</p>
+
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered">
+
+                    <tr>
+                        <th>Nombre</th>
+                        <th>País</th>
+                        <th>Año</th>
+                        <th>Link</th>
+                    </tr>
+                    <!-- fin de th -->
+                    <tr>
+                        <td class="recename">Salchichón de Chocolate</td>
+                        <td>Italia</td>
+                        <td>Desconocido</td>
+                        <td><a href="https://cookpad.com/uy/recetas/10247562-salchichon-de-chocolate" target="_blank">Ir</a></td>
+                    </tr>
+    
+                    <tr>
+                        <td class="recename">Pizza</td>
+                        <td>Italia</td>
+                        <td>1800 a.C</td>
+                        <td><a href="https://cookpad.com/uy/recetas/5762686-pizza-casera" target="_blank">Ir</a></td>
+                    </tr>
+    
+                    <tr>
+                        <td class="recename">Paella</td>
+                        <td>España</td>
+                        <td>1800 d.C</td>
+                        <td><a href="https://cookpad.com/uy/recetas/24387950-paella-de-mariscos?ref=search&search_term=paella" target="_blank">Ir</a></td>
+                    </tr>
+                  
+                </table>
+            </div>
+            
+      </section>
+
+
+
+      <section class="container noticias bg-primary">   <!-- Noticias -->
+            
+        <div>
+          <h2>Noticias sobre <br> Nuevos Restaurantes</h2>
+            <p>Aqui encontraras los nuevos restaurantes que <strong><em>abrieron sus puertas</em></strong>  en <strong>Montevideo</strong></p>
+
+            <h3><em>Nuevos restaurantes</em></h3>
+            <p>Estos son los nuevos restaurantes que abrieron sus puertas</p>
+            <ul>
+                <li>Paolo's Burger</li>
+                <li>Moni's PizzaPro</li>
+                <li>Maya's Subfast</li>
+                <li>Elon Musk's SpaceHamburgerX</li>
+                <li>Manolo's Tomatoes</li>
+            </ul>
+
+            <h3><em>Top 5</em></h3>
+            <p>Estos son los mejores valorados</p>
+            <ol>
+                <li>New Yorka</li>
+                <li>Chicaco</li>
+                <li>Polona's Food</li>
+                <li>Walter Isaacson's Ice Cow</li>
+                <li>ChatGpt's FoodTruck</li>
+            </ol>
+
+        </div>
+
+      </section>
+    </main>
+
+    <footer class="footer"> <!-- Pie de Página -->
+        <h4>Contacto:</h4>
+
+        <a href="mailto:contact@donaldtrumpisaacson.me">contact@donaldtrumpisaacson.me</a>
+        <p>Dirección: 18 de Julio 1234</p>
+        <p>Teléfono: 099 999 999</p>
+    </footer>
+    
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
