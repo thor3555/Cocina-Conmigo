@@ -381,7 +381,6 @@ footer a{
 }
 
 .historia-p2 ul{ /* Lista */
-    width: 80%;
     padding: 0;
     margin: 0 auto;
     list-style: none;
@@ -412,8 +411,7 @@ footer a{
 /* Introduccion a la página 3 */
 
 .consejos-p3{ /* Consejos */
-
-    margin: 50px 0px 0px 0px;
+    margin: 0;
     background-color: rgb(245, 215, 179); /* Color de fondo de la sección */ 
     padding: 70px 25px 70px 25px; /* Espaciado interior de la sección */
 }
@@ -432,8 +430,6 @@ footer a{
 }
 
 .consejos-p3 img{ /* Imagen */
-    width: 700px;
-    height: 400px;
     display: block;
     margin: 50px auto 50px auto;
     border-radius: 25px;
@@ -442,10 +438,10 @@ footer a{
 
 /* Tabla */
 
-.tabla-consejos-p3 { /* Tabla */
-    width: 800px;   
+.tabla-consejos-p3 { /* Tabla */ 
     margin: 0 auto;
     padding: 0px 0px 72px 0px;
+    list-style: none;
 }
 
 .tabla-consejos-p3 h2 { /* Títulos */
@@ -485,16 +481,21 @@ footer a{
     text-decoration: underline 2px;
 }
 
-.articulos-cocina-p3 li{ /* Datos */
-    font-size: 20px;
-    color: rgb(0, 0, 0);
-    padding: 5px 0px 10px 0px;
+.tarjetas{
+    display: flex;
+    flex-direction: column;
     background-color: #FCE7C8;
-    width: 400px;
-    margin: 0px auto 5px auto;
-    list-style: none;
+    margin: 20px auto;
     border-radius: 25px;
 }
+
+.articulos-cocina-p3 ul li{ /* Datos */
+    list-style: none;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    padding: 5px;
+}
+
 
 
 

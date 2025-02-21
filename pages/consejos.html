@@ -17,44 +17,36 @@
 <body>
 
     <header> <!-- Encabezado -->
-
         <nav class="navbar navbar-expand-lg bg-warning-subtle">
-  
-          <div class="container-fluid">
-  
-            <!-- Logo -->
-            <a class="navbar-brand nav-brand-logo-per" href="#">
-              <img src="../img/cocina.svg" alt="" width="80" height="80">
-            </a>
-  
-            <!-- Botón Movil -->
-            <button class="navbar-toggler bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-  
-            <!-- Menú -->
-            <div class="collapse navbar-collapse navbar-nav-per" id="navbarNavAltMarkup">
-              <div class="navbar-nav">
-                <a class="nav-link" href="../index.html">Inicio</a>
-                <a class="nav-link" href="recetas.html">Recetas</a>
-                <a class="nav-link active" aria-current="page" href="#">Consejos</a>
-                <a class="nav-link" href="contacto.html">Contacto</a>
-                <a class="nav-link" href="sobrenosotros.html">Sobre Nosotros</a>
-              </div>
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand nav-brand-logo-per" href="#">
+                <img src="../img/cocina.svg" alt="" width="80" height="80">
+                </a>
+    
+                <!-- Botón Movil -->
+                <button class="navbar-toggler bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <!-- Menú -->
+                <div class="collapse navbar-collapse navbar-nav-per" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="../index.html">Inicio</a>
+                    <a class="nav-link" href="recetas.html">Recetas</a>
+                    <a class="nav-link active" aria-current="page" href="#">Consejos</a>
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                    <a class="nav-link" href="sobrenosotros.html">Sobre Nosotros</a>
+                </div>
             </div>
-  
-          </div>
         </nav>
     </header>
 
     <main>
-
-        <section class="consejos-p3"> <!-- Sección de Consejos de Cocina -->
-
+        <section class="container-fluid consejos-p3"> <!-- Sección de Consejos de Cocina -->
             <h1>Consejos de Cocina</h1> <!-- Título -->
             <p>Estos son los mejores consejos de los mejores chef's del mundo</p> <!-- Introducción -->
-            <img src="../img/pasteleria.jpg" alt=""> <!-- Imagen de Pastelería -->
-
+            <img src="../img/pasteleria.jpg" alt="" class="col-10 col-md-8 col-lg-8 col-xl-6 col-xxl-4" > <!-- Imagen de Pastelería -->
             <ul class="tabla-consejos-p3">
                 <li> <h2>Organiza tus ingredientes antes de cocinar</h2> <p>Tener todos los ingredientes listos y medidos (mise en place) te ahorra tiempo y evita errores.</p> </li>
                 <li> <h2>Afila tus cuchillos regularmente</h2> <p>Un cuchillo afilado es más seguro y eficiente que uno desafilado.</p> </li>
@@ -63,20 +55,14 @@
                 <li> <h2>Lava las frutas y verduras adecuadamente</h2> <p>Asegúrate de eliminar la suciedad y los pesticidas antes de consumirlas.</p> </li>
                 <li> <h2>Deja reposar las carnes después de cocinarlas</h2> <p>Esto permite que los jugos se redistribuyan, manteniendo la carne jugosa y sabrosa.</p> </li>
             </ul>
-
         </section>
 
-        <section class="articulos-cocina-p3"> <!-- Artículos de Cocina -->
-
+        <section class="container-fluid articulos-cocina-p3"> <!-- Artículos de Cocina -->
             <h2>Artículos de Cocina</h2>
-
-            <ol>
-                
-                <li>
-                    
-                    <h3>Utensilios básicos</h3>
-                    
-                    <ul>
+            <div>
+                <div class="tarjetas col-10 col-sm-8 col-md-6 col-lg-6 col-xl-4">
+                    <h3 class="text-center">Utensilios básicos</h3>
+                    <ul class="list-unstyled text-center">
                         <li>Cuchillos (chef, pelador, panadero)</li>
                         <li>Tijeras de cocina</li>
                         <li>Pelador de verduras</li>
@@ -84,41 +70,29 @@
                         <li>Espátulas (de silicona y de madera)</li>
                         <li>Batidor de mano</li>
                     </ul>
-
-                </li>
-
-                <li>
-                    
-                    <h3>Ollas y sartenes</h3>
-                    
-                    <ul>
+                </div>
+                <div class="tarjetas col-10 col-sm-8 col-md-6 col-lg-6 col-xl-4">
+                    <h3 class="text-center">Ollas y sartenes</h3>
+                    <ul class="list-unstyled text-center">
                         <li>Sartén antiadherente</li>
                         <li>Sartén de acero inoxidable</li>
                         <li>Olla pequeña, mediana y grande</li>
                         <li>Cacerola o olla para guisos</li>
                         <li>Sartén tipo wok</li>
                     </ul>
-
-                </li>
-
-                <li>
-                    
-                    <h3>Electrodomésticos pequeños</h3>
-                    
-                    <ul>
+                </div>
+                <div class="tarjetas col-10 col-sm-8 col-md-6 col-lg-6 col-xl-4">
+                    <h3 class="text-center">Electrodomésticos pequeños</h3>
+                    <ul class="list-unstyled text-center">
                         <li>Licuadora</li>
                         <li>Batidora de mano o de pedestal</li>
                         <li>Procesador de alimentos</li>
                         <li>Hervidor eléctrico</li>
                         <li>Cafetera o prensa francesa</li>
                     </ul>
-
-                </li>
-
-            </ol>
-
+                </div>
+            </div>    
         </section>
-
     </main>
 
     <footer> <!-- Pie de Página -->
