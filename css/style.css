@@ -274,48 +274,33 @@ footer a{
 
 
 
-/* Página 2 */
+/* -------------------------------- Página 2 -------------------------------- */
 
-/* Grid */
+/* -------------------------------- Menú Categorías -------------------------------- */
 
-.body-p2{
-    display: grid;
-    grid-template-areas: 
-    "header header header"
-    "sidebar main main"
-    "footer footer footer";
+/* ---------------- SIDEBAR CATEGORÍAS P2 ---------------- */
+
+.sidebar{
+    position: relative;
 }
-
-.menu-all-p2{
-    grid-area: header;
-}
-
-.barra-categorias-p2{
-    grid-area: sidebar;
-}
-
-.main-p2{
-    grid-area: main;
-}
-
-.footer{
-    grid-area: footer;
-}
-
-/* Menú Categorías */
 
 .categorias-p2{ /* Categorías */
     font-family: 'Courier New', Courier, monospace;
-    margin: 25px;
-    padding: 15px 15px 15px 15px;
+    padding: 40px 0px;
     background-color: #c4fc43;
-    border-radius: 25px 25px 25px 25px;
-    width: 20vw;
     height: 65vh;
 }
 
-.categorias-p2 h1{ /* Título */
-    font-size: 35px;
+@media (min-width: 992px){
+    .categorias-p2{ /* Categorías */
+        border-radius: 25px;
+        position: sticky;
+        top: 20vh;
+    }
+}
+
+.categorias-p2 h2{ /* Título */
+    font-size: 45px;
     text-align: center;
     padding: 0px 0px 25px 0px;
 }
@@ -323,12 +308,15 @@ footer a{
 .categorias-p2 nav{ /* Menú */
     text-align: center;
     padding: 0px 0px 15px 0px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    gap: 5px;
 }
 
-.categorias-p2 ul{ /* Lista */
-    list-style: none;
+@media (min-width: 768px){
+    .categorias-p2{
+        font-size: 20px;
+    }
 }
 
 .categorias-p2 a{ /* Enlaces */
@@ -385,7 +373,7 @@ footer a{
 
 /* historia de las recetas más conocidas */
 
-.historia-p2 h2{ /* Título */
+.historia-p2 h1{ /* Título */
     font-size: 40px;
     text-align: center;
     text-decoration: underline 3px;
@@ -393,7 +381,8 @@ footer a{
 }
 
 .historia-p2 ul{ /* Lista */
-    width: 70%;
+    width: 80%;
+    padding: 0;
     margin: 0 auto;
     list-style: none;
 }
