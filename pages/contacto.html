@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
-     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,133 +18,90 @@
 <body>
 
     <header> <!-- Encabezado -->
-
         <nav class="navbar navbar-expand-lg bg-warning-subtle">
-  
-          <div class="container-fluid">
-  
-            <!-- Logo -->
-            <a class="navbar-brand nav-brand-logo-per" href="#">
-              <img src="../img/cocina.svg" alt="" width="80" height="80">
-            </a>
-  
-            <!-- Botón Movil -->
-            <button class="navbar-toggler bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-  
-            <!-- Menú -->
-            <div class="collapse navbar-collapse navbar-nav-per" id="navbarNavAltMarkup">
-              <div class="navbar-nav">
-                <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
-                <a class="nav-link" href="recetas.html">Recetas</a>
-                <a class="nav-link" href="consejos.html">Consejos</a>
-                <a class="nav-link active" href="#">Contacto</a>
-                <a class="nav-link" href="sobrenosotros.html">Sobre Nosotros</a>
-              </div>
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand nav-brand-logo-per" href="#">
+                    <img src="../img/cocina.svg" alt="" width="80" height="80">
+                </a>
+                <!-- Botón Movil -->
+                <button class="navbar-toggler bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Menú -->
+                <div class="collapse navbar-collapse navbar-nav-per" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                    <a class="nav-link" href="recetas.html">Recetas</a>
+                    <a class="nav-link" href="consejos.html">Consejos</a>
+                    <a class="nav-link active" href="#">Contacto</a>
+                    <a class="nav-link" href="sobrenosotros.html">Sobre Nosotros</a>
+                </div>
             </div>
-  
-          </div>
         </nav>
     </header>
 
-    <main class="main-p4">
-
-        <section class="icons-p4">
-
-            <div class="inicio-p4">
-
-                <h1>Contacto</h1>
-            
-            </div>
-
-            <div class="icons-1-p4">
-            
-                <div class="icons-2-p4">
-                        
-                    <samp>Formas de Contacto</samp>
-    
-                    <h2>Pongase en contacto con nosotros</h2>
-    
+    <main>
+        <section class="container-fluid icons-p4">
+            <div class="row">
+                <div class="inicio-p4">
+                    <h1>Contacto</h1>
                 </div>
-    
+                <div class="icons-2-p4">
+                    <samp>Formas de Contacto</samp>
+                    <h2>Pongase en contacto con nosotros</h2>
+                </div>
                 <div class="icons-3-p4">
-    
                     <div class="icons-4-p4">
                         <img src="../img/ubicacionlogo.png" alt="ubicación">
                         <h3>ubicación</h3>
                         <p>La Cumparsita 1473</p>
                     </div>
-    
                     <div class="icons-4-p4">
                         <img src="../img/whatsapplogo.png" alt="whatsapp">
                         <h3>WhatsApp</h3>
                         <p>000000000</p>
                     </div>
-    
                     <div class="icons-4-p4">
                         <img src="../img/phonelogo.png" alt="phone">
                         <h3>Teléfono</h3>
                         <p>00000000</p>
                     </div>
-    
                     <div class="icons-4-p4">
                         <img src="..//img/maillogo.png" alt="mail">
                         <h3>Mail</h3>
                         <p>cocinacnmi@cocinaconmigo.com</p>
                     </div>
-    
                 </div>
-
             </div>
-            
-
-
         </section>
-
-
-        <section class="formulario-p4"> <!-- Formulario de Contacto -->
-
-            <form action="/sumbit" method="post" class="form-p4"> 
-
+        <section class="container col-10 mt-5 formulario-p4"> <!-- Formulario de Contacto -->
+            <form action="/submit" method="post" class="form-p4"> 
                 <!-- Campo de Nombre -->
                 <label for="nombre" class="nombre">Nombre</label>
                 <input type="text" name="nombre" id="nombre" class="input-n">
-
                 <!-- Campo de Apellido -->
                 <label for="apellido" class="apellido">Apellido</label>
                 <input type="text" name="apellido" id="apellido" class="input-a">
-
                 <!-- Campo de Email -->
                 <label for="email" class="email">Email</label>
                 <input type="email" name="email" id="email" class="input-e">
-
-
                 <!-- Boton de Verificación -->
                 <label for="verif" class="form">Verificación</label>
                 <input type="checkbox" name="verif" id="verif" class="form-input">
-
-                <input type="submit" value="Enviar" class="form-imput-1">
+                <input type="submit" value="Enviar" class="form-input-1">
                 
             </form>
-
         </section>
-
         <section class="info-p4"> <!-- Información -->
-
             <h2>Dirección</h2>
             <p>La Cumparsita 1473</p>
-
             <img src="https://www.opina.com.uy/img/hotel-ibis-mapa_138790.webp" alt="mapa de la ubicación">
-
         </section>
-
-
     </main>
-    
+
     <footer> <!-- Pie de Página -->
         <h4>Contacto:</h4>
-
         <a href="mailto:contact@donaldtrumpisaacson.me">contact@donaldtrumpisaacson.me</a>
         <p>Dirección: 18 de Julio 1234</p>
         <p>Teléfono: 099 999 999</p>
