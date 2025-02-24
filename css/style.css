@@ -501,15 +501,23 @@ footer a{
 
 /* Página 4 */
 
-/* font-family: "Sedgwick Ave Display", serif; */ 
-
-
-.main-p4{
-    margin: 20px;
-}
-
 .icons-p4{
     padding: 0;
+    background-color: wheat;
+    box-shadow: 0px 2px 27px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px 0px 50px 0px;
+}
+
+@media (min-width:1245px){
+
+    .icons-p4{
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 50px 80px 50px 80px !important; /* La clase row de bootstrap pone un padin de .5 rem y no deja poner este padding */
+        background-color: wheat;
+        border-radius: 25px 25px 0px 0px;
+        box-shadow: 0px 2px 27px 10px rgba(0, 0, 0, 0.3);
+    }
 }
 
 
@@ -542,27 +550,54 @@ footer a{
 }
 
 .icons-3-p4{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    gap: 20px;
 }
-
 
 .icons-4-p4{
     padding: 25px;
-    margin: 20px;
+    margin: 0 auto;
     width: 50%;
     height: auto;
-    background-color: wheat;
+    background-color: white;
     text-align: center;
     border-radius: 15px;
     box-shadow: 0px 0px 40px -9px black;
     border: 1px solid black;
 }
 
+@media (min-width:768px){
+
+    .icons-3-p4{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 50px;
+    }
+
+    .icons-4-p4{
+        width: 70%;
+    }
+}
+
+@media (min-width:1245px){
+
+    .icons-3-p4{
+        grid-template-columns: repeat(4, minmax(200px, 1fr));
+        grid-template-rows: auto;
+        gap: 50px;
+    }
+
+    .icons-4-p4{
+        width: 100%;
+    }
+}
+
+
 .icons-4-p4:last-child p{
     font-size: 14px;
+    word-wrap: break-word;
     
 }
 
@@ -583,7 +618,8 @@ footer a{
     box-shadow: 0px 0px 40px -9px rgb(214, 161, 16);
     display: grid;
     border-radius: 25px;
-    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    grid-template-columns: repeat(2, minmax(130px, 1fr));
     grid-template-rows: repeat(4 , 30px);
     column-gap: 10px;
     row-gap: 10px;
@@ -663,7 +699,7 @@ footer a{
 /* Casi footer */
 
 .info-p4{
-    margin: 50px auto;
+    margin: 0px auto 0px auto;
     padding: 25px 0px 50px 0px;
     background-color: black;
 }
@@ -686,13 +722,24 @@ footer a{
 .info-p4 img{
     display: block;
     margin: 25px auto 0px auto;
-    width: 90%;
+    width: 80%;
     border-radius: 25px;
     box-shadow: 0px 0px 40px -9px rgb(214, 161, 16);
     height: auto;
     
 }
 
+@media (min-width:768px){
+    .info-p4 img{
+        width: 60%;
+    }
+}
+
+@media (min-width:1200px){
+    .info-p4 img{
+        width: 40%;
+    }
+}
 
 /* Página 5 */
 
