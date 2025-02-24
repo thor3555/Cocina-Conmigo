@@ -8,7 +8,7 @@
 
 /* Colores Generales */
 :root {
-    --main-color: blue; /* Color principal por defecto (tema claro) */
+    --main-color: blue; /* Color principal por defecto */
     --background-color: #FCE7C8; /* Fondo por defecto */
     --text-color: rgb(255, 255, 255); /* Texto por defecto */
 }
@@ -21,6 +21,29 @@ body{
     background-color: var(--background-color);
 }
 
+/* Menú */
+.navbar-nav-per{
+    justify-content: flex-end;
+    font-size: 20px;
+    text-align: center;
+    border-top: 2px solid orange;
+    
+}
+
+/* Media */
+
+@media (min-width: 992px){
+    .nav-brand-logo-per{
+        margin: 0px 0px 0px 20px;
+    }
+}
+
+@media (min-width: 992px){
+    .navbar-nav-per{
+        margin: 0px 20px 0px 0px;
+        border-top: 0;
+    }
+}
 
 /* Footer */
 
@@ -34,7 +57,7 @@ footer h4{
     text-align: center;
     padding: 5px 0px 5px 0px;
     border-radius: 25px;
-    text-decoration: underline rgb(55, 0, 255) 4px;
+    text-decoration: underline var(--main-color) 4px;
     background-color: #c4fc43;
     width: 250px;
     margin: 0px auto 10px auto;
@@ -64,33 +87,10 @@ footer a{
 
 
 
-/* Página 1 */
+/* -------------------------------- Página 1 -------------------------------- */
 
+/* Sección Bienvenida */
 
-@media (min-width: 992px){
-    .nav-brand-logo-per snam{
-        margin: 0px 0px 0px 50px;
-    }
-}
-
-.navbar-nav-per{
-    justify-content: flex-end;
-    font-size: 20px;
-    text-align: center;
-    border-top: 2px solid orange;
-    
-}
-
-@media (min-width: 992px){
-    .navbar-nav-per{
-        margin: 0px 50px 0px 0px;
-        border-top: 0;
-    }
-}
-
-
-
-/* Estilos de la cabecera */
 .bienvenida{
     color: var(--main-color);
     font-family: "Poppins", serif;
@@ -119,6 +119,8 @@ footer a{
     border-radius: 25px;
 }
 
+/* Media */
+
 @media (min-width: 662px){ /* Corrección aquí */
     .bienvenida img{
         width: 70%;
@@ -134,12 +136,11 @@ footer a{
 }
 
 
-/* Fin de la cabecera */
+/* Fin de la Sección Bienvenida */
 
 
-/* Estilos de la sección de recetas */
+/* Estilos de la Sección de recetas */
 
-/* recetas populares */
 .recetas{
     color: var(--text-color); /* Color del texto de las recetas */
     font-family: 'Courier New', Courier, monospace; /* Fuente */
@@ -161,40 +162,30 @@ footer a{
     padding: 0px 0px 25px 0px;
 }
 
-@media (min-width: 662px) {
+/* Media */
 
+@media (min-width: 662px) {
     .recetas h2{
         color: black;
         font-size: 35px;
         text-align: center;
         padding: 0px 0px 15px 0px;
     }
-    
     .recetas p{
         font-size: 14px;
         text-align: center;
         color: black;
         padding: 0px 0px 25px 0px;
     }
-    
 }
 
+/* Sección Tabla */
 
-
-
-/* Tabla */
 .recetas table{
     margin: 0 auto;
     color: black;
     border-spacing: 10px; 
     width: 90%;
-}
-
-@media (min-width: 662px) {
-    .recetas table{
-        width: 80%;
-    }
-    
 }
 
 .recetas th{ 
@@ -205,6 +196,7 @@ footer a{
     padding: 15px 22px 15px 22px;
     border-radius: 50px;
 }
+
 .recetas td{
     color: black;
     font-size: 15px;
@@ -217,13 +209,19 @@ footer a{
     background-color: sandybrown;
 }
 
+/* Media */
 
-
+@media (min-width: 662px) {
+    .recetas table{
+        width: 80%;
+    }
+    
+}
 
 /* Fin de recetas */
 
 
-/* Noticias */
+/* Sección Noticias */
 
 .noticias{
     padding: 100px 0px 100px 0px;
@@ -246,7 +244,6 @@ footer a{
     padding: 50px 0px 0px 0px;
 }
 
-
 .noticias ul, .noticias ol{ /* Aplica a todas las listas de la sección */
     font-size: 25px;
     color: rgb(0, 0, 0);
@@ -254,21 +251,18 @@ footer a{
     list-style: none;
 }
 
-@media (width < 1024px){
+/* Media */
 
+@media (width < 1024px){
     .noticias p{
         padding: 0px 0px 25px 0px; /* Aplica a todos los párrafos de la sección */
         font-size: 20px;
     }
-        
-    
     .noticias ul, .noticias ol{ /* Aplica a todas las listas de la sección */
         font-size: 25px;
         color: rgb(0, 0, 0);
         padding: 5px 0px 15px 0px;
     }
-    
-
 }
 
 
@@ -278,25 +272,11 @@ footer a{
 
 /* -------------------------------- Menú Categorías -------------------------------- */
 
-/* ---------------- SIDEBAR CATEGORÍAS P2 ---------------- */
-
-.sidebar{
-    position: relative;
-}
-
 .categorias-p2{ /* Categorías */
     font-family: 'Courier New', Courier, monospace;
     padding: 40px 0px;
     background-color: #c4fc43;
-    height: 65vh;
-}
-
-@media (min-width: 992px){
-    .categorias-p2{ /* Categorías */
-        border-radius: 25px;
-        position: sticky;
-        top: 20vh;
-    }
+    height: auto;
 }
 
 .categorias-p2 h2{ /* Título */
@@ -313,14 +293,7 @@ footer a{
     gap: 5px;
 }
 
-@media (min-width: 768px){
-    .categorias-p2{
-        font-size: 20px;
-    }
-}
-
 .categorias-p2 a{ /* Enlaces */
-
     text-decoration: none; /* Quitamos el subrayado de los enlaces */
     color: rgb(255, 255, 255);   /* Color de los enlaces */
     font-size: 20px;    /* Tamaño del texto de los enlaces */
@@ -341,7 +314,22 @@ footer a{
     text-decoration-thickness: 2px;  /* Grosor del subrayado */
 }
 
-/* grid barra lat */
+/* Media */
+
+@media (min-width: 992px){
+    .categorias-p2{ /* Categorías */
+        border-radius: 25px;
+    }
+}
+
+@media (min-width: 768px){
+    .categorias-p2{
+        font-size: 20px;
+    }
+}
+
+
+/* Grid SideBar */
 
 .barra-lateral-1-p2{
     display: grid;
@@ -371,7 +359,7 @@ footer a{
 
 
 
-/* historia de las recetas más conocidas */
+/* Historia de las recetas más conocidas */
 
 .historia-p2 h1{ /* Título */
     font-size: 40px;
@@ -404,8 +392,7 @@ footer a{
 
 
 
-
-/* Página 3 */
+/*------------------ Página 3 -------------------------- */
 
 
 /* Introduccion a la página 3 */
@@ -436,7 +423,7 @@ footer a{
 }
 
 
-/* Tabla */
+/* Tabla Recomendaciones  */
 
 .tabla-consejos-p3 { /* Tabla */ 
     margin: 0 auto;
@@ -499,7 +486,9 @@ footer a{
 
 
 
-/* Página 4 */
+/* ---------------------Página 4----------------------- */
+
+/* Bienvenida Iconos de Contacto */
 
 .icons-p4{
     padding: 0;
@@ -507,19 +496,6 @@ footer a{
     box-shadow: 0px 2px 27px 10px rgba(0, 0, 0, 0.3);
     padding: 20px 0px 50px 0px;
 }
-
-@media (min-width:1245px){
-
-    .icons-p4{
-        max-width: 90%;
-        margin: 0 auto;
-        padding: 50px 80px 50px 80px !important; /* La clase row de bootstrap pone un padin de .5 rem y no deja poner este padding */
-        background-color: wheat;
-        border-radius: 25px 25px 0px 0px;
-        box-shadow: 0px 2px 27px 10px rgba(0, 0, 0, 0.3);
-    }
-}
-
 
 .inicio-p4{
     display: block;
@@ -568,6 +544,33 @@ footer a{
     border: 1px solid black;
 }
 
+.icons-4-p4:last-child p{
+    font-size: 14px;
+    word-wrap: break-word;
+    
+}
+
+.icons-4-p4 img{
+    width: 40%;
+    height: auto;
+    background-color: #e09900;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+/* Media */
+@media (min-width:1245px){
+
+    .icons-p4{
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 50px 80px 50px 80px !important; /* La clase row de bootstrap pone un padding de .5 rem y no deja poner este padding por eso el !important */
+        background-color: wheat;
+        border-radius: 25px 25px 0px 0px;
+        box-shadow: 0px 2px 27px 10px rgba(0, 0, 0, 0.3);
+    }
+}
+
 @media (min-width:768px){
 
     .icons-3-p4{
@@ -595,19 +598,6 @@ footer a{
 }
 
 
-.icons-4-p4:last-child p{
-    font-size: 14px;
-    word-wrap: break-word;
-    
-}
-
-.icons-4-p4 img{
-    width: 40%;
-    height: auto;
-    background-color: #e09900;
-    padding: 10px;
-    border-radius: 15px;
-}
 
 /* Formulario */
 
@@ -696,7 +686,7 @@ footer a{
 
 
 
-/* Casi footer */
+/* Ubicación */
 
 .info-p4{
     margin: 0px auto 0px auto;
@@ -729,6 +719,8 @@ footer a{
     
 }
 
+/* Media */
+
 @media (min-width:768px){
     .info-p4 img{
         width: 60%;
@@ -741,7 +733,7 @@ footer a{
     }
 }
 
-/* Página 5 */
+/*---------------------- Página 5 ------------------------------ */
 
 
 /* Introduccion a la página 5 */
