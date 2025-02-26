@@ -16,15 +16,7 @@ Cocina Conmigo es un proyecto sobre recetas populares y noticias de nuevos resta
    ```bash
    cd Cocina-Conmigo
    ```
-3. ⚙️ Instala las dependencias:
-   ```bash
-   npm install
-   ```
-4. ▶️ Ejecuta el proyecto:
-   ```bash
-   npm start
-   ```
-
+   
 ## Uso
 - 📖 Explora recetas populares.
 - 📰 Lee noticias sobre nuevos restaurantes.
