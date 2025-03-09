@@ -1,0 +1,32 @@
+/* Sección Articulos de Cocina */
+
+.articulos-cocina-p3{ /* Artículos de Cocina */
+    padding: 100px 0px 100px 0px;
+    background-color: #FADA7A;
+    text-align: center;
+    h2{  /* Artículos de Cocina Título */
+        font-size: 50px;
+        text-decoration: underline 3px;
+        padding: 0px 0px 20px 0px;
+    }
+    h3{ /* Subtítulos */
+        padding: 15px 0px 10px 0px;
+        font-size: 25px;
+        text-decoration: underline 2px;
+    }
+    li{ /* Datos */
+        list-style: none;
+        font-size: 20px;
+        color: rgb(0, 0, 0);
+        padding: 5px;
+    }
+}
+
+.tarjetas{
+    display: flex;
+    flex-direction: column;
+    background-color: #FCE7C8;
+    margin: 20px auto;
+    border-radius: 25px;
+}
+

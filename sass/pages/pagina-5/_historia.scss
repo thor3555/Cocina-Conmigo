@@ -1,0 +1,22 @@
+///
+@use "../../components/variables" as v;
+/// 
+
+.historia-p5{ /* Historia */
+    text-align: center;
+    padding: 25px 0px;
+    margin: 0px 40px;
+    h1{ /* Título */
+        font-size: 45px;
+        color: v.$titulos;
+        text-decoration: underline 2px;
+        padding: 0px 0px 20px 0px;
+    }
+    p{ /* Párrafo */
+        font-size: 17px;
+        text-align: justify;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        padding: 0px 0px 20px 0px;
+    }
+}

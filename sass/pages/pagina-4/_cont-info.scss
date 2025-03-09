@@ -1,0 +1,85 @@
+/* Sección Contacto Informacón */
+
+.icons-p4{
+    padding: 0;
+    background-color: wheat;
+    box-shadow: 0px 2px 27px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px 0px 50px 0px;
+}
+
+.icons-2-p4{
+    font-family: 'Courier New', Courier, monospace;
+    samp{
+        font-size: 16px;
+    }
+    h2{
+        font-size: 45px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin: 10px 0px;
+    }
+}
+
+.icons-3-p4{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    gap: 20px;
+}
+
+.icons-4-p4{
+    padding: 25px;
+    margin: 0 auto;
+    width: 50%;
+    height: auto;
+    background-color: white;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0px 0px 40px -9px black;
+    border: 1px solid black;
+    img{
+        width: 40%;
+        height: auto;
+        background-color: #e09900;
+        padding: 10px;
+        border-radius: 15px;
+    }
+}
+
+.icons-4-p4:last-child p{
+    font-size: 14px;
+    word-wrap: break-word;
+    
+}
+
+/* Media */
+@media (min-width:768px){
+
+    .icons-3-p4{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 50px;
+    }
+
+    .icons-4-p4{
+        width: 70%;
+    }
+}
+
+@media (min-width:1245px){
+    .icons-p4{
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 50px 80px 50px 80px !important; /* La clase row de bootstrap pone un padding de .5 rem y no deja poner este padding por eso el !important */
+        background-color: wheat;
+        border-radius: 25px 25px 0px 0px;
+        box-shadow: 0px 2px 27px 10px rgba(0, 0, 0, 0.3);
+    }
+    .icons-3-p4{
+        grid-template-columns: repeat(4, minmax(200px, 1fr));
+        grid-template-rows: auto;
+        gap: 50px;
+    }
+    .icons-4-p4{
+        width: 100%;
+    }
+}

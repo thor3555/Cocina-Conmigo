@@ -1,0 +1,24 @@
+/* Sección Barra Lateral */
+
+.barra-lateral-1-p2{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(8vw, 1fr));
+    grid-template-rows: repeat(2, 80px);
+    gap: 5px;
+    margin: 25px 0px;
+    justify-content: center;
+    
+}
+
+.barra-lateral-2-p2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    border-radius: 25px;
+    img{
+        width: 60px;
+        
+    }
+}
+

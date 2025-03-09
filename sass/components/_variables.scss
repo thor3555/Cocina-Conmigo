@@ -1,0 +1,10 @@
+//Variables
+
+//Colores
+$titulos: rgb(204, 120, 10);
+$fondos: rgb(158, 173, 68);
+
+
+@mixin borde-redondeado($radio) {
+    border-radius: $radio;
+}
