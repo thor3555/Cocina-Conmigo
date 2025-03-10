@@ -205,6 +205,70 @@ footer a {
     padding: 5px 0px 15px 0px;
   }
 }
+/* Seccón Taskbar */
+.taskbar {
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+}
+.taskbar ul {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+.taskbar ul li {
+  margin: 0px 10px 10px 10px;
+  list-style: none;
+}
+.taskbar ul li button {
+  border: none;
+  border-radius: 50px;
+}
+.taskbar ul li button a {
+  padding-right: 0px;
+}
+.taskbar ul li button a span {
+  display: none;
+}
+.taskbar ul li button a img {
+  width: 80px;
+  height: 80px;
+  padding: 0px 10px;
+}
+
+#noticias { /* Esto es para que al llevarte al la sección de bienvenida se vea correctamente */
+  padding-top: 150px;
+}
+
+#historia { /* Esto es para que al llevarte al la sección de bienvenida se vea correctamente */
+  padding-top: 120px;
+  margin-top: -100px;
+}
+
+#utensilios { /* Esto es para que al llevarte al la sección de bienvenida se vea correctamente */
+  padding-top: 120px;
+  margin-top: -100px;
+}
+
+#ubi { /* Esto es para que al llevarte al la sección de bienvenida se vea correctamente */
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+/* Media */
+@media (min-width: 874px) {
+  .taskbar ul li button a {
+    padding-right: 20px;
+  }
+  .taskbar ul li button a span {
+    display: inline;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 20px;
+  }
+}
+/* -------------------------------- Página 1 -------------------------------- */
 /* Sección Categorías */
 .categorias-p2 { /* Categorías */
   font-family: "Courier New", Courier, monospace;
