@@ -1,3 +1,7 @@
+///
+@use "../../components/variables" as v; 
+/// 
+
 /* Seccón Taskbar */
 
 .taskbar{
@@ -15,7 +19,7 @@
             list-style: none;
             button{
                 border: none;
-                border-radius: 50px;
+                @include v.borde-redondeado(50px, 2px solid rgb(240, 203, 203));
                 a{
                     padding-right: 0px;
                     span{
@@ -56,10 +60,13 @@
 @media (min-width: 874px){
     .taskbar ul li button a {
         padding-right: 20px;
+        text-decoration: none;
     }
     .taskbar ul li button a span {
         display: inline;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-size: 20px;
+        color: v.$link;
+        
     }
 }

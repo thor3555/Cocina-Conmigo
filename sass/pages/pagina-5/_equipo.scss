@@ -44,7 +44,7 @@
                 font-weight: 800;
                 background-color: brown;
                 padding: 8px 20px;
-                @include v.borde-redondeado(20px);
+                @include v.borde-redondeado(20px, 2px solid black);
             }
         }
     }

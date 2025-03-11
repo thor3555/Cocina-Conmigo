@@ -127,7 +127,6 @@ footer a {
 .recetas table {
   margin: 0 auto;
   color: black;
-  border-spacing: 10px;
   width: 90%;
 }
 .recetas table th {
@@ -142,7 +141,7 @@ footer a {
   color: black;
   font-size: 15px;
   background-color: rgb(235, 173, 80); /* Aplica a toda la tabla */
-  padding: 15px 22px 15px 22px;
+  padding: 15px 10px 15px 10px;
   border-radius: 10px;
 }
 .recetas table td.recename { /* Aplica solo a la clase recename, que es la que contiene el nombre de la receta */
@@ -164,7 +163,7 @@ footer a {
     padding: 0px 0px 25px 0px;
   }
   .recetas table {
-    width: 80%;
+    width: 60%;
   }
 }
 /* Sección Noticias */
@@ -225,6 +224,7 @@ footer a {
 .taskbar ul li button {
   border: none;
   border-radius: 50px;
+  border: 2px solid rgb(240, 203, 203);
 }
 .taskbar ul li button a {
   padding-right: 0px;
@@ -261,11 +261,13 @@ footer a {
 @media (min-width: 874px) {
   .taskbar ul li button a {
     padding-right: 20px;
+    text-decoration: none;
   }
   .taskbar ul li button a span {
     display: inline;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     font-size: 20px;
+    color: rgb(32, 211, 157);
   }
 }
 /* -------------------------------- Página 1 -------------------------------- */
@@ -705,6 +707,7 @@ footer a {
   background-color: brown;
   padding: 8px 20px;
   border-radius: 20px;
+  border: 2px solid black;
 }
 
 /* Reset CSS */

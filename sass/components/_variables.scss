@@ -2,9 +2,11 @@
 
 //Colores
 $titulos: rgb(204, 120, 10);
+$link: rgb(32, 211, 157);
 $fondos: rgb(158, 173, 68);
 
 
-@mixin borde-redondeado($radio) {
+@mixin borde-redondeado($radio, $border) {
     border-radius: $radio;
+    border: $border;
 }
