@@ -1,8 +1,130 @@
 @charset "UTF-8";
+.boton-enlace, .equipo-p5 table td a, .historia-p5 a {
+  background-color: rgb(158, 173, 68);
+  color: rgb(204, 120, 10);
+  border-radius: 5px;
+  border: 0px solid black;
+  transition: 1s;
+}
+.boton-enlace:hover, .equipo-p5 table td a:hover, .historia-p5 a:hover {
+  animation: balance 1s;
+}
+
+.balance, .icons-4-p4:hover {
+  animation: balance 1s;
+}
+@keyframes balance {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(2deg) scale(1.1);
+  }
+  75% {
+    transform: rotate(-4deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Seccón Taskbar */
+.taskbar {
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+}
+.taskbar ul {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+.taskbar ul li {
+  margin: 0px 10px 20px 10px;
+  list-style: none;
+}
+.taskbar ul li button {
+  border: none;
+  border-radius: 50px;
+  border: 2px solid rgb(240, 203, 203);
+  box-shadow: 0px 0px 10px 0px rgb(240, 203, 203);
+  transition: transform 1s ease;
+}
+.taskbar ul li button a {
+  padding-right: 0px;
+}
+.taskbar ul li button a span {
+  display: none;
+}
+.taskbar ul li button a img {
+  width: 80px;
+  height: 80px;
+  padding: 0px 10px;
+  animation: girar-taskbar 20s ease-in-out infinite;
+  animation-delay: 5s;
+}
+
+@keyframes girar-taskbar {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  75% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+button:hover {
+  background-color: rgb(218, 126, 126);
+  transform: scale(1.1);
+}
+
+#noticias { /* Esto es para que al llevarte al la sección de bienvenida se vea correctamente */
+  padding-top: 150px;
+}
+
+#historia { /* Esto es para que al llevarte al la sección de bienvenida se vea correctamente */
+  padding-top: 120px;
+  margin-top: -100px;
+}
+
+#utensilios { /* Esto es para que al llevarte al la sección de bienvenida se vea correctamente */
+  padding-top: 120px;
+  margin-top: -100px;
+}
+
+#ubi { /* Esto es para que al llevarte al la sección de bienvenida se vea correctamente */
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+/* Media */
+@media (min-width: 874px) {
+  .taskbar ul li button a {
+    padding-right: 20px;
+    text-decoration: none;
+  }
+  .taskbar ul li button a span {
+    display: inline;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 20px;
+    color: rgb(32, 211, 157);
+  }
+}
 /* Menú */
 header {
   position: fixed;
   width: 100%;
+  z-index: 1000;
   top: 0;
 }
 
@@ -13,6 +135,28 @@ header {
   border-top: 2px solid orange;
 }
 
+.nav-brand-logo-per {
+  animation: girar 10s linear infinite;
+  animation-delay: 5s;
+}
+
+@keyframes girar {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(360deg) scale(1.2);
+  } /* Giro completo en la mitad del tiempo */
+  50% {
+    transform: rotate(360deg);
+  }
+  75% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  } /* Mantiene la posición durante la segunda mitad */
+}
 /* Media */
 @media (min-width: 992px) {
   .nav-brand-logo-per {
@@ -31,7 +175,9 @@ main {
 /* Footer */
 footer {
   background-color: #ff901a;
-  padding: 15px 0px 15px 0px;
+  padding: 50px 0px 80px 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 footer h4 {
   font-size: 45px;
@@ -204,72 +350,6 @@ footer a {
     padding: 5px 0px 15px 0px;
   }
 }
-/* Seccón Taskbar */
-.taskbar {
-  position: fixed;
-  width: 100%;
-  bottom: 0px;
-  display: flex;
-  justify-content: center;
-}
-.taskbar ul {
-  display: flex;
-  flex-direction: row;
-  margin: 0;
-}
-.taskbar ul li {
-  margin: 0px 10px 10px 10px;
-  list-style: none;
-}
-.taskbar ul li button {
-  border: none;
-  border-radius: 50px;
-  border: 2px solid rgb(240, 203, 203);
-}
-.taskbar ul li button a {
-  padding-right: 0px;
-}
-.taskbar ul li button a span {
-  display: none;
-}
-.taskbar ul li button a img {
-  width: 80px;
-  height: 80px;
-  padding: 0px 10px;
-}
-
-#noticias { /* Esto es para que al llevarte al la sección de bienvenida se vea correctamente */
-  padding-top: 150px;
-}
-
-#historia { /* Esto es para que al llevarte al la sección de bienvenida se vea correctamente */
-  padding-top: 120px;
-  margin-top: -100px;
-}
-
-#utensilios { /* Esto es para que al llevarte al la sección de bienvenida se vea correctamente */
-  padding-top: 120px;
-  margin-top: -100px;
-}
-
-#ubi { /* Esto es para que al llevarte al la sección de bienvenida se vea correctamente */
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
-
-/* Media */
-@media (min-width: 874px) {
-  .taskbar ul li button a {
-    padding-right: 20px;
-    text-decoration: none;
-  }
-  .taskbar ul li button a span {
-    display: inline;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    font-size: 20px;
-    color: rgb(32, 211, 157);
-  }
-}
 /* -------------------------------- Página 1 -------------------------------- */
 /* Sección Categorías */
 .categorias-p2 { /* Categorías */
@@ -375,7 +455,7 @@ footer a {
 }
 .consejos-p3 h1 { /* Título */
   font-family: "Poppins", serif;
-  font-size: 35px;
+  font-size: 40px;
   text-align: center;
   padding: 0;
 }
@@ -493,6 +573,7 @@ footer a {
   border-radius: 15px;
   box-shadow: 0px 0px 40px -9px black;
   border: 1px solid black;
+  transition: 0.3s ease;
 }
 .icons-4-p4 img {
   width: 40%;
@@ -505,6 +586,12 @@ footer a {
 .icons-4-p4:last-child p {
   font-size: 14px;
   word-wrap: break-word;
+}
+
+.icons-4-p4:hover {
+  /* Animación de _variables*/
+  box-shadow: 0px 0px 40px -9px rgb(191, 252, 26);
+  border: 1px solid rgb(217, 255, 0);
 }
 
 /* Media */
@@ -644,11 +731,14 @@ footer a {
 }
 .historia-p5 { /* Historia */
   text-align: center;
-  padding: 25px 0px;
+  padding: 50px 0px;
   margin: 0px 40px;
 }
 .historia-p5 h1 { /* Título */
-  font-size: 45px;
+  font-size: 50px;
+  font-family: "Sedgwick Ave Display", cursive;
+  font-weight: 400;
+  font-style: normal;
   color: rgb(204, 120, 10);
   text-decoration: underline 2px;
   padding: 0px 0px 20px 0px;
@@ -659,6 +749,18 @@ footer a {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   padding: 0px 0px 20px 0px;
+}
+.historia-p5 a { /* Enlace */
+  background-color: red;
+  color: white;
+  text-decoration: none;
+  font-size: large;
+  font-family: "Sedgwick Ave Display", cursive;
+  font-weight: 400;
+  font-style: normal;
+  display: inline-block;
+  padding: 20px 40px;
+  margin: 20px 0px;
 }
 
 .equipo-p5 { /* Equipo */
@@ -704,9 +806,10 @@ footer a {
 .equipo-p5 table td a {
   color: black;
   font-weight: 800;
-  background-color: brown;
-  padding: 8px 20px;
-  border-radius: 20px;
+  background-color: rgb(216, 70, 70);
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 10px;
   border: 2px solid black;
 }
 

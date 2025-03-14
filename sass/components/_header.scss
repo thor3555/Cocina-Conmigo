@@ -2,6 +2,7 @@
 header {
     position: fixed;
     width: 100%;
+    z-index: 1000;
     top: 0; // Asegúrate de que el header esté en la parte superior
 }
 
@@ -10,8 +11,22 @@ header {
     font-size: 20px;
     text-align: center;
     border-top: 2px solid orange;
+    
 }
 
+.nav-brand-logo-per {
+    animation: girar 10s linear infinite;
+    animation-delay: 5s;
+}
+
+
+@keyframes girar {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(360deg) scale(1.2); } /* Giro completo en la mitad del tiempo */
+    50% { transform: rotate(360deg); }
+    75% { transform: rotate(360deg); }
+    100% { transform: rotate(360deg); } /* Mantiene la posición durante la segunda mitad */
+}
 /* Media */
 
 @media (min-width: 992px) {

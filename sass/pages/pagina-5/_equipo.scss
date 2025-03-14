@@ -42,9 +42,11 @@
             a{
                 color: black;
                 font-weight: 800;
-                background-color: brown;
-                padding: 8px 20px;
-                @include v.borde-redondeado(20px, 2px solid black);
+                background-color: rgb(216, 70, 70);
+                display: inline-block;
+                padding: 10px 30px;
+                @extend .boton-enlace;
+                @include v.borde-redondeado(10px, 2px solid black);
             }
         }
     }

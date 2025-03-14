@@ -1,3 +1,7 @@
+///
+@use "../../components/variables" as v;
+/// 
+
 /* Sección Contacto Informacón */
 
 .icons-p4{
@@ -36,6 +40,7 @@
     border-radius: 15px;
     box-shadow: 0px 0px 40px -9px black;
     border: 1px solid black;
+    transition: 0.3s ease;
     img{
         width: 40%;
         height: auto;
@@ -48,6 +53,13 @@
 .icons-4-p4:last-child p{
     font-size: 14px;
     word-wrap: break-word;
+    
+}
+
+.icons-4-p4:hover{
+    @extend .balance; /* Animación de _variables*/
+    box-shadow: 0px 0px 40px -9px rgb(191, 252, 26);
+    border: 1px solid rgb(217, 255, 0);
     
 }
 

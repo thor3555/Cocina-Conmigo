@@ -1,5 +1,5 @@
 ///
-@use "../../components/variables" as v; 
+@use "variables" as v; 
 /// 
 
 /* Seccón Taskbar */
@@ -15,11 +15,13 @@
         flex-direction: row;
         margin: 0;
         li{
-            margin: 0px 10px 10px 10px;
+            margin: 0px 10px 20px 10px;
             list-style: none;
             button{
                 border: none;
                 @include v.borde-redondeado(50px, 2px solid rgb(240, 203, 203));
+                box-shadow: 0px 0px 10px 0px rgb(240, 203, 203);
+                transition: transform 1s ease;
                 a{
                     padding-right: 0px;
                     span{
@@ -29,6 +31,8 @@
                         width: 80px;
                         height: 80px;
                         padding: 0px 10px;
+                        animation: girar-taskbar 20s ease-in-out infinite;
+                        animation-delay: 5s;
                     }
                 }
                 
@@ -36,6 +40,20 @@
         }
     }
 }
+
+@keyframes girar-taskbar {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(360deg); }
+    50% { transform: rotate(360deg); }
+    75% { transform: rotate(360deg); }
+    100% { transform: rotate(360deg); }
+}
+
+button:hover{
+    background-color: rgb(218, 126, 126);
+    transform: scale(1.1);
+}
+
 #noticias { /* Esto es para que al llevarte al la sección de bienvenida se vea correctamente */
     padding-top: 150px;
 }
