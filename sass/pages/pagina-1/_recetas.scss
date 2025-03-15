@@ -1,0 +1,66 @@
+/* Sección de recetas */
+
+.recetas{
+    color: var(--text-color); /* Color del texto de las recetas */
+    font-family: 'Courier New', Courier, monospace; /* Fuente */
+    background-color: rgb(245, 215, 179); /* Color de fondo de la sección */ 
+    padding: 100px 25px 100px 25px; /* Espaciado interior de la sección */
+    h2{
+        color: black;
+        font-size: 50px;
+        text-align: center;
+        padding: 0px 0px 15px 0px;
+    }
+    p{
+        font-size: 18px;
+        text-align: center;
+        color: black;
+        padding: 0px 0px 25px 0px;
+    }
+    table{
+        margin: 0 auto;
+        color: black; 
+        width: 90%;
+        th{ 
+            color: black;
+            font-size: 15px;
+            background-color: aquamarine;
+            text-align: center;
+            padding: 15px 22px 15px 22px;
+            border-radius: 50px;
+        }
+        td{
+            color: black;
+            font-size: 15px;
+            background-color: rgb(235, 173, 80); /* Aplica a toda la tabla */
+            padding: 15px 10px 15px 10px;
+            border-radius: 10px;
+        }
+        td.recename { /* Aplica solo a la clase recename, que es la que contiene el nombre de la receta */
+            background-color: rgb(236, 152, 79);
+        }
+    }
+}	
+
+/* Media */
+
+@media (min-width: 662px) {
+    .recetas h2{
+        color: black;
+        font-size: 35px;
+        text-align: center;
+        padding: 0px 0px 15px 0px;
+    }
+    .recetas p{
+        font-size: 14px;
+        text-align: center;
+        color: black;
+        padding: 0px 0px 25px 0px;
+    }
+    .recetas table{
+        width: 60%;
+    }
+    
+}
+
+

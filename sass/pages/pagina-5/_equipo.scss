@@ -1,0 +1,62 @@
+///
+@use "../../components/variables" as v;
+///
+
+.equipo-p5{ /* Equipo */
+    padding: 50px 0px 50px 0px;
+    background-color: #FADA7A;
+    text-align: center;
+    h2{ /* Título */
+        font-size: 72px;
+        color: v.$titulos;
+        font-family: "Poppins", serif;
+        font-weight: 400;
+        font-style: italic;
+        text-decoration: underline 1px;
+        padding: 0px 0px 20px 0px;
+    }
+    p{ /* Párrafo */
+        font-family: "Poppins", serif; 
+        font-size: 20px; 
+        padding: 0px 0px 25px 0px; 
+    }
+    table {  /* Tabla */
+        margin: 25px auto 25px auto; /* Margen */
+        tr { /* Fila */
+            background-color: #FCE7C8; /* Color de fondo */
+        }
+        th{ /* Cabecera */
+            padding: 15px 10px 15px 10px; /* Espaciado interior de las celdas */
+            background-color: v.$fondos; /* Color de fondo */
+            font-family: "Poppins", serif; /* Fuente */
+            font-size: 25px; /* Tamaño de la fuente */
+            font-weight: 800; /* Peso de la fuente */
+            width: 200px; /* Ancho de las celdas */
+        }
+        td{ /* Datos */
+            font-family: "Poppins", serif; /* Fuente */
+            font-size: 15px; /* Tamaño de la fuente */
+            font-weight: 300; /* Peso de la fuente */
+            padding: 15px 10px 15px 10px; /* Espaciado interior de las celdas */
+            width: 200px; /* Ancho de las celdas */
+            a{
+                color: black;
+                font-weight: 800;
+                background-color: rgb(216, 70, 70);
+                display: inline-block;
+                padding: 10px 30px;
+                @extend .boton-enlace;
+                @include v.borde-redondeado(10px, 2px solid black);
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+

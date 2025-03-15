@@ -1,0 +1,90 @@
+///
+@use "variables" as v; 
+/// 
+
+/* Seccón Taskbar */
+
+.taskbar{
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    ul{
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        li{
+            margin: 0px 10px 20px 10px;
+            list-style: none;
+            button{
+                border: none;
+                @include v.borde-redondeado(50px, 2px solid rgb(240, 203, 203));
+                box-shadow: 0px 0px 10px 0px rgb(240, 203, 203);
+                transition: transform 1s ease;
+                a{
+                    padding-right: 0px;
+                    span{
+                        display: none;
+                    }
+                    img{
+                        width: 80px;
+                        height: 80px;
+                        padding: 0px 10px;
+                        animation: girar-taskbar 20s ease-in-out infinite;
+                        animation-delay: 5s;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+@keyframes girar-taskbar {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(360deg); }
+    50% { transform: rotate(360deg); }
+    75% { transform: rotate(360deg); }
+    100% { transform: rotate(360deg); }
+}
+
+button:hover{
+    background-color: rgb(218, 126, 126);
+    transform: scale(1.1);
+}
+
+#noticias { /* Esto es para que al llevarte al la sección de bienvenida se vea correctamente */
+    padding-top: 150px;
+}
+
+#historia { /* Esto es para que al llevarte al la sección de bienvenida se vea correctamente */
+    padding-top: 120px;
+    margin-top: -100px;
+}
+
+#utensilios { /* Esto es para que al llevarte al la sección de bienvenida se vea correctamente */
+    padding-top: 120px;
+    margin-top: -100px;
+}
+
+#ubi { /* Esto es para que al llevarte al la sección de bienvenida se vea correctamente */
+    padding-top: 120px;
+    padding-bottom:120px;
+}
+
+
+/* Media */
+@media (min-width: 874px){
+    .taskbar ul li button a {
+        padding-right: 20px;
+        text-decoration: none;
+    }
+    .taskbar ul li button a span {
+        display: inline;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 20px;
+        color: v.$link;
+        
+    }
+}

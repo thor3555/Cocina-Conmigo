@@ -1,0 +1,72 @@
+//Variables
+
+//Colores
+$titulos: rgb(204, 120, 10);
+$link: rgb(32, 211, 157);
+$fondos: rgb(158, 173, 68);
+
+
+@mixin borde-redondeado($radio, $border) {
+    border-radius: $radio;
+    border: $border;
+}
+
+.boton-enlace{
+    background-color: $fondos;
+    color: $titulos;
+    @include borde-redondeado(5px, 0px solid black);
+    transition: 1s;
+    &:hover{
+        animation: balance 1s;
+    }
+}
+
+.bento-anim{
+    animation: bento 2s ease;
+    border: 3px solid white;
+    transition: transform 1s ease;
+    box-shadow: 0px 5px 15px rgba(255, 165, 0, 0.6);
+}
+@keyframes bento{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.04);
+    }
+    75%{
+        transform: scale(1.04);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.balance{
+    animation: balance 1s;
+}
+@keyframes balance{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(2deg) scale(1.1);
+    }
+    75%{
+        transform: rotate(-4deg) scale(1.1);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.girar-logo{
+    animation: girar-logo 10s linear infinite;
+}
+@keyframes girar-logo {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(360deg) scale(1.2); } /* Giro completo en la mitad del tiempo */
+    50% { transform: rotate(360deg); }
+    75% { transform: rotate(360deg); }
+    100% { transform: rotate(360deg); } /* Mantiene la posición durante la segunda mitad */
+}

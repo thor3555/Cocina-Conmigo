@@ -13,6 +13,8 @@
   <title>Cocina Conmigo</title>
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Animation CSS -->
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
   <header> <!-- Encabezado -->
@@ -20,7 +22,7 @@
       <div class="container-fluid">
         <!-- Logo -->
         <a class="navbar-brand nav-brand-logo-per" href="#">
-          <img src="img/cocina.svg" alt="" width="80" height="80">
+          <img src="img/cocina.svg" alt="Logo de Cocina Conmigo" width="80" height="80">
         </a>
         <!-- Botón Movil -->
         <button class="navbar-toggler bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,9 +44,9 @@
 
   <main class="bg-warning main">
     <section class="container-fluid bienvenida"> <!-- Bienvenida -->
-      <h1>Bienvenid@ a la familia Cocina Conmigo</h1>
-      <h3>Aqui encontraras todo tipo de recetas y consejos sobre cocina</h3>
-      <img src="img/pasteleria.jpg" alt="Foto de muffins decorados con crema y cerezas">
+      <h1 class="animate__animated animate__backInUp">Bienvenid@ a la familia Cocina Conmigo</h1>
+      <h3 class="animate__animated animate__fadeInUp">Aqui encontraras todo tipo de recetas y consejos sobre cocina</h3>
+      <img class="animate__animated animate__fadeInUp" src="img/pasteleria.jpg" alt="Foto de muffins decorados con crema y cerezas">
     </section>
     <section class="container recetas">   <!-- Recetas Populares -->
       <h2>Recetas Populares</h2>
@@ -79,7 +81,7 @@
         </table> <!-- Fin Recetas Populares -->
       </div>
     </section>
-    <section class="container noticias bg-primary">   <!-- Noticias -->
+    <section id="noticias" class="container noticias bg-primary">   <!-- Noticias -->
       <div>
         <h2>Noticias sobre <br> Nuevos Restaurantes</h2>
         <p>Aqui encontraras los nuevos restaurantes que <strong><em>abrieron sus puertas</em></strong>  en <strong>Montevideo</strong></p>
@@ -103,13 +105,55 @@
         </ol>
       </div>
     </section> <!-- Fin Noticias -->
+    
+    <section class="container bento-main">
+      <div class="section-bentogrids">
+        <div class="bento">
+          <img src="img/cocina.svg" alt="">
+        </div>
+        <div class="bento">
+          <h2>🥞 Panqueques Caseros</h2>
+          <p>Harina, leche, huevos y un toque de miel. ¡Listo en 10 min!</p>
+        </div>
+        <div class="bento">
+          <h2>📝 Tip de Cocina</h2>
+          <p>Para un arroz más suelto, enjuágalo con agua fría antes de cocinarlo.</p>
+        </div>
+        <div class="bento">
+          <h2>🍎 Frutas y Verduras de Temporada</h2>
+          <p>Estamos en marzo, lo mejor es comer naranjas y espinaca.</p>
+        </div>
+        <div class="bento">
+          <h2>⏳ Tiempos de Cocción</h2>
+          <ul>
+              <li>🍝 Pasta: 8-12 min</li>
+              <li>🍗 Pollo: 25-30 min</li>
+              <li>🥚 Huevo duro: 10 min</li>
+              <li>🥔 Papas hervidas: 15-20 min</li>
+          </ul></div>
+        <div class="bento"><h2>🛒 Lista de Compras</h2>
+          <ul>
+              <li>🥚 Huevos</li>
+              <li>🥛 Leche</li>
+              <li>🍞 Pan</li>
+              <li>🧀 Queso</li>
+          </ul>
+          </div>
+      </div>
+    </section>
   </main>
 
+  <div class="container-fluid taskbar"> <!-- Barra de Tareas -->
+    <ul>
+      <li><button><a href="pages/contacto.html#ubi"><img src="img/taskbar-phone.svg" alt="Botón de ir a ver la ubicación del local"><span>Contacto</span></a></button></li>
+      <li><button><a href="pages/recetas.html#historia"><img src="img/taskbar-book.svg" alt="Botón de Historia para conocer sobre las recetas"><span>Historia</span></a></button></li>
+      <li><button><a href="pages/consejos.html#utensilios"><img src="img/taskbar-receta.svg" alt="Botón para ver los utensilios de una cocina"><span>Utensilios</span></a></button></li>
+      <li><button><a href="#noticias"><img src="img/taskbar-a-us.svg" alt="Botón para conocer las últimas noticias"><span>Noticias</span></a></button></li>
+    </ul>
+  </div>
+
   <footer class="footer"> <!-- Pie de Página -->
-    <h4>Contacto:</h4>
     <a href="mailto:contact@donaldtrumpisaacson.me">contact@donaldtrumpisaacson.me</a>
-    <p>Dirección: 18 de Julio 1234</p>
-    <p>Teléfono: 099 999 999</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

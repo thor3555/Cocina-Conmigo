@@ -1,0 +1,109 @@
+///
+@use "../../components/variables" as v;
+/// 
+
+
+.bento-main{
+    background-color: rgb(255, 225, 225);
+    padding: 40px 0px;
+    margin: 50px 0px;
+    @include v.borde-redondeado(10px, 4px solid rgb(197, 155, 155));
+}
+
+.section-bentogrids{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 400px));
+    grid-template-rows: repeat(12, 100px);
+    justify-content: center;
+    gap: 20px;
+
+    .bento{
+        padding: 20px;
+        background-color: rgb(198, 104, 241);
+        @include v.borde-redondeado(12px, 3px solid salmon);
+        p{
+            padding-top: 15px;
+            font-size: 18px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        li{
+            font-size: 18px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        &:nth-child(1){
+            grid-area: 3/ 1 / 5 / 4;
+            img{
+                width: 100%;
+                height: 100%;
+                @extend .girar-logo;
+            }
+        }
+        &:nth-child(2){
+            grid-area: 1/1/3/4;
+            text-align: center;
+        }
+        &:nth-child(3){
+            grid-area: 5/1/7/4;
+        }
+        &:nth-child(4){
+            grid-area: 7/1/9/4;
+            
+        }
+        &:nth-child(5){
+            grid-area: 9/1/11/4;
+            
+        }
+        &:nth-child(6){
+            grid-area: 11/1/13/4;
+            
+        }
+        /* Hover */
+        &:hover{
+            @extend .bento-anim;
+        }
+    }
+}
+
+/* Media */
+@media (min-width: 992px) {
+    .section-bentogrids{
+        display: grid;
+        grid-template-columns: repeat(3, minmax(100px, 400px));
+        grid-template-rows: repeat(5, 100px);
+        justify-content: center;
+        gap: 20px;
+        .bento{
+            padding: 20px;
+            background-color: rgb(184, 87, 230);
+            @include v.borde-redondeado(10px, 3px solid salmon);
+            &:nth-child(1){
+                grid-area: 3/ 3 / 4 / 2;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    scale: 2;
+                }
+            }
+            &:nth-child(2){
+                grid-area: 1/ 1 / 3 / 2;
+                text-align: center;
+            }
+            &:nth-child(3){
+                grid-area: 1/2/3/2;
+                
+            }
+            &:nth-child(4){
+                grid-area: 3/1/6/1;
+                
+            }
+            &:nth-child(5){
+                grid-area: 4/2/6/4;
+                
+            }
+            &:nth-child(6){
+                grid-area: 1/3/4/3;
+                
+            }
+        }
+    }
+}

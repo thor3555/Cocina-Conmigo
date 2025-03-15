@@ -1,0 +1,38 @@
+///
+@use "../../components/variables" as v;
+/// 
+
+.historia-p5{ /* Historia */
+    text-align: center;
+    padding: 50px 0px;
+    margin: 0px 40px;
+    h1{ /* Título */
+        font-size: 50px;
+        font-family: "Sedgwick Ave Display", cursive;
+        font-weight: 400;
+        font-style: normal;
+        color: v.$titulos;
+        text-decoration: underline 2px;
+        padding: 0px 0px 20px 0px;
+    }
+    p{ /* Párrafo */
+        font-size: 17px;
+        text-align: justify;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        padding: 0px 0px 20px 0px;
+    }
+    a{ /* Enlace */
+        background-color: red;
+        color: white;
+        text-decoration: none;
+        font-size: large;
+        font-family: "Sedgwick Ave Display", cursive;
+        font-weight: 400;
+        font-style: normal;
+        display: inline-block;
+        @extend .boton-enlace;
+        padding: 20px 40px;
+        margin: 20px 0px;
+    }
+}

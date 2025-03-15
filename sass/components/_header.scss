@@ -1,0 +1,42 @@
+///
+@use "variables" as v; 
+///
+
+/* Menú */
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0; // Asegúrate de que el header esté en la parte superior
+}
+
+.navbar-nav-per {
+    justify-content: flex-end;
+    font-size: 20px;
+    text-align: center;
+    border-top: 2px solid orange;
+    
+}
+
+.nav-brand-logo-per {
+    @extend .girar-logo;
+}
+
+/* Media */
+
+@media (min-width: 992px) {
+    .nav-brand-logo-per {
+        margin: 0px 0px 0px 20px;
+    }
+
+    .navbar-nav-per {
+        margin: 0px 20px 0px 0px;
+        border-top: 0;
+    }
+}
+
+/* Agrega un padding-top al contenido principal */
+main {
+    padding-top: 100px; // Ajusta este valor según sea necesario
+}
+

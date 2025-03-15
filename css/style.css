@@ -1,804 +1,921 @@
-/* Reset CSS */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@charset "UTF-8";
+.boton-enlace, .equipo-p5 table td a, .historia-p5 a {
+  background-color: rgb(158, 173, 68);
+  color: rgb(204, 120, 10);
+  border-radius: 5px;
+  border: 0px solid black;
+  transition: 1s;
+}
+.boton-enlace:hover, .equipo-p5 table td a:hover, .historia-p5 a:hover {
+  animation: balance 1s;
 }
 
-
-/* Colores Generales */
-:root {
-    --main-color: blue; /* Color principal por defecto */
-    --background-color: #FCE7C8; /* Fondo por defecto */
-    --text-color: rgb(255, 255, 255); /* Texto por defecto */
+.bento-anim, .section-bentogrids .bento:hover {
+  animation: bento 2s ease;
+  border: 3px solid white;
+  transition: transform 1s ease;
+  box-shadow: 0px 5px 15px rgba(255, 165, 0, 0.6);
 }
 
-
-/* Body */
-
-body{
-    margin: 0;
-    background-color: var(--background-color);
+@keyframes bento {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+  75% {
+    transform: scale(1.04);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.balance, .icons-4-p4:hover {
+  animation: balance 1s;
 }
 
-/* Menú */
-.navbar-nav-per{
-    justify-content: flex-end;
-    font-size: 20px;
-    text-align: center;
-    border-top: 2px solid orange;
-    
+@keyframes balance {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(2deg) scale(1.1);
+  }
+  75% {
+    transform: rotate(-4deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.girar-logo, .section-bentogrids .bento:nth-child(1) img, .nav-brand-logo-per {
+  animation: girar-logo 10s linear infinite;
+}
+
+@keyframes girar-logo {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(360deg) scale(1.2);
+  } /* Giro completo en la mitad del tiempo */
+  50% {
+    transform: rotate(360deg);
+  }
+  75% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  } /* Mantiene la posición durante la segunda mitad */
+}
+/* Seccón Taskbar */
+.taskbar {
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+}
+.taskbar ul {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+.taskbar ul li {
+  margin: 0px 10px 20px 10px;
+  list-style: none;
+}
+.taskbar ul li button {
+  border: none;
+  border-radius: 50px;
+  border: 2px solid rgb(240, 203, 203);
+  box-shadow: 0px 0px 10px 0px rgb(240, 203, 203);
+  transition: transform 1s ease;
+}
+.taskbar ul li button a {
+  padding-right: 0px;
+}
+.taskbar ul li button a span {
+  display: none;
+}
+.taskbar ul li button a img {
+  width: 80px;
+  height: 80px;
+  padding: 0px 10px;
+  animation: girar-taskbar 20s ease-in-out infinite;
+  animation-delay: 5s;
+}
+
+@keyframes girar-taskbar {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  75% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+button:hover {
+  background-color: rgb(218, 126, 126);
+  transform: scale(1.1);
+}
+
+#noticias { /* Esto es para que al llevarte al la sección de bienvenida se vea correctamente */
+  padding-top: 150px;
+}
+
+#historia { /* Esto es para que al llevarte al la sección de bienvenida se vea correctamente */
+  padding-top: 120px;
+  margin-top: -100px;
+}
+
+#utensilios { /* Esto es para que al llevarte al la sección de bienvenida se vea correctamente */
+  padding-top: 120px;
+  margin-top: -100px;
+}
+
+#ubi { /* Esto es para que al llevarte al la sección de bienvenida se vea correctamente */
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 /* Media */
-
-@media (min-width: 992px){
-    .nav-brand-logo-per{
-        margin: 0px 0px 0px 20px;
-    }
+@media (min-width: 874px) {
+  .taskbar ul li button a {
+    padding-right: 20px;
+    text-decoration: none;
+  }
+  .taskbar ul li button a span {
+    display: inline;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 20px;
+    color: rgb(32, 211, 157);
+  }
+}
+/* Menú */
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
 }
 
-@media (min-width: 992px){
-    .navbar-nav-per{
-        margin: 0px 20px 0px 0px;
-        border-top: 0;
-    }
+.navbar-nav-per {
+  justify-content: flex-end;
+  font-size: 20px;
+  text-align: center;
+  border-top: 2px solid orange;
+}
+
+/* Media */
+@media (min-width: 992px) {
+  .nav-brand-logo-per {
+    margin: 0px 0px 0px 20px;
+  }
+  .navbar-nav-per {
+    margin: 0px 20px 0px 0px;
+    border-top: 0;
+  }
+}
+/* Agrega un padding-top al contenido principal */
+main {
+  padding-top: 100px;
 }
 
 /* Footer */
-
-footer{
-    background-color: #ff901a;
-    padding: 15px 0px 15px 0px;
+footer {
+  background-color: #ff901a;
+  padding: 25px 0px 120px 0px;
 }
-
-footer h4{
-    font-size: 45px;
-    text-align: center;
-    padding: 5px 0px 5px 0px;
-    border-radius: 25px;
-    text-decoration: underline var(--main-color) 4px;
-    background-color: #c4fc43;
-    width: 250px;
-    margin: 0px auto 10px auto;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 200;
+footer a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  margin: 0px auto 10px auto;
+  display: block;
+  text-align: center;
+  font-size: 25px;
 }
-footer p{
-    text-align: center;
-    padding: 0px 0px 5px 0px;
-    background-color: #FADA7A;
-    width: 350px;
-    display: block;
-    margin: 0px auto 0px auto;
-    border-radius: 5px 5px 5px 5px;
-    padding: 5px 5px 5px 5px;
-    font-size: 25px;
-}
-footer a{
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    margin: 0px auto 10px auto;
-    display: block;
-    width: 350px;
-    text-align: center;
-    font-size: 25px;
-}
-
-
-
-/* -------------------------------- Página 1 -------------------------------- */
 
 /* Sección Bienvenida */
-
-.bienvenida{
-    color: var(--main-color);
-    font-family: "Poppins", serif;
-    text-align: center;
-    padding: 50px 0px 100px 0px;
+.bienvenida {
+  color: var(--main-color);
+  font-family: "Poppins", serif;
+  text-align: center;
+  padding: 50px 0px 100px 0px;
 }
-
-.bienvenida h1{
-    font-size: 45px;
-    color: rgb(55, 0, 255);
-    text-decoration: underline 4px;
-    padding: 0px 0px 15px 0px;
+.bienvenida h1 {
+  font-size: 45px;
+  color: rgb(55, 0, 255);
+  text-decoration: underline 4px;
+  padding: 0px 0px 15px 0px;
 }
-
-.bienvenida h3{
-    font-size: 25px;
-    text-decoration: underline 4px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: rgb(0, 255, 157);
+.bienvenida h3 {
+  font-size: 25px;
+  text-decoration: underline 4px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: rgb(0, 255, 157);
 }
-
-.bienvenida img{
-    width: 90%;
-    height: auto;
-    margin: 70px auto 25px auto;
-    border-radius: 25px;
+.bienvenida img {
+  width: 90%;
+  height: auto;
+  margin: 70px auto 25px auto;
+  border-radius: 25px;
 }
 
 /* Media */
-
-@media (min-width: 662px){ /* Corrección aquí */
-    .bienvenida img{
-        width: 70%;
-        height: auto; /* Se recomienda mantener auto para evitar distorsión */
-    }
+@media (min-width: 662px) { /* Corrección aquí */
+  .bienvenida img {
+    width: 70%;
+    height: auto; /* Se recomienda mantener auto para evitar distorsión */
+  }
+}
+@media (min-width: 992px) { /* Corrección aquí */
+  .bienvenida img {
+    width: 40%;
+    height: auto; /* Se recomienda mantener auto para evitar distorsión */
+  }
+}
+/* Sección de recetas */
+.recetas {
+  color: var(--text-color); /* Color del texto de las recetas */
+  font-family: "Courier New", Courier, monospace; /* Fuente */
+  background-color: rgb(245, 215, 179); /* Color de fondo de la sección */
+  padding: 100px 25px 100px 25px; /* Espaciado interior de la sección */
+}
+.recetas h2 {
+  color: black;
+  font-size: 50px;
+  text-align: center;
+  padding: 0px 0px 15px 0px;
+}
+.recetas p {
+  font-size: 18px;
+  text-align: center;
+  color: black;
+  padding: 0px 0px 25px 0px;
+}
+.recetas table {
+  margin: 0 auto;
+  color: black;
+  width: 90%;
+}
+.recetas table th {
+  color: black;
+  font-size: 15px;
+  background-color: aquamarine;
+  text-align: center;
+  padding: 15px 22px 15px 22px;
+  border-radius: 50px;
+}
+.recetas table td {
+  color: black;
+  font-size: 15px;
+  background-color: rgb(235, 173, 80); /* Aplica a toda la tabla */
+  padding: 15px 10px 15px 10px;
+  border-radius: 10px;
+}
+.recetas table td.recename { /* Aplica solo a la clase recename, que es la que contiene el nombre de la receta */
+  background-color: rgb(236, 152, 79);
 }
 
-@media (min-width: 992px){ /* Corrección aquí */
-    .bienvenida img{
-        width: 40%;
-        height: auto; /* Se recomienda mantener auto para evitar distorsión */
-    }
-}
-
-
-/* Fin de la Sección Bienvenida */
-
-
-/* Estilos de la Sección de recetas */
-
-.recetas{
-    color: var(--text-color); /* Color del texto de las recetas */
-    font-family: 'Courier New', Courier, monospace; /* Fuente */
-    background-color: rgb(245, 215, 179); /* Color de fondo de la sección */ 
-    padding: 100px 25px 100px 25px; /* Espaciado interior de la sección */
-}	
-
-.recetas h2{
+/* Media */
+@media (min-width: 662px) {
+  .recetas h2 {
     color: black;
-    font-size: 50px;
+    font-size: 35px;
     text-align: center;
     padding: 0px 0px 15px 0px;
-}
-
-.recetas p{
-    font-size: 18px;
+  }
+  .recetas p {
+    font-size: 14px;
     text-align: center;
     color: black;
     padding: 0px 0px 25px 0px;
+  }
+  .recetas table {
+    width: 60%;
+  }
 }
-
-/* Media */
-
-@media (min-width: 662px) {
-    .recetas h2{
-        color: black;
-        font-size: 35px;
-        text-align: center;
-        padding: 0px 0px 15px 0px;
-    }
-    .recetas p{
-        font-size: 14px;
-        text-align: center;
-        color: black;
-        padding: 0px 0px 25px 0px;
-    }
-}
-
-/* Sección Tabla */
-
-.recetas table{
-    margin: 0 auto;
-    color: black;
-    border-spacing: 10px; 
-    width: 90%;
-}
-
-.recetas th{ 
-    color: black;
-    font-size: 15px;
-    background-color: aquamarine;
-    text-align: center;
-    padding: 15px 22px 15px 22px;
-    border-radius: 50px;
-}
-
-.recetas td{
-    color: black;
-    font-size: 15px;
-    background-color: rgb(235, 173, 80); /* Aplica a toda la tabla */
-    padding: 15px 22px 15px 22px;
-    border-radius: 10px;
-}
-
-.recetas td.recename { /* Aplica solo a la clase recename, que es la que contiene el nombre de la receta */
-    background-color: sandybrown;
-}
-
-/* Media */
-
-@media (min-width: 662px) {
-    .recetas table{
-        width: 80%;
-    }
-    
-}
-
-/* Fin de recetas */
-
-
 /* Sección Noticias */
-
-.noticias{
-    padding: 100px 0px 100px 0px;
-    color: rgb(255, 255, 255);
-    text-align: center; 
+.noticias {
+  padding: 100px 0px 100px 0px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+.noticias h2 {
+  font-size: 50px; /* Título */
+  padding: 0px 0px 20px 0px;
+}
+.noticias p {
+  padding: 0px 0px 25px 0px; /* Aplica a todos los párrafos de la sección */
+  font-size: 25px;
+}
+.noticias h3 {
+  font-size: 45px; /* Subtítulo */
+  padding: 50px 0px 0px 0px;
 }
 
-.noticias h2{
-    font-size: 50px; /* Título */
-    padding: 0px 0px 20px 0px;
+.noticias ul, .noticias ol { /* Aplica a todas las listas de la sección */
+  font-size: 25px;
+  color: rgb(0, 0, 0);
+  padding: 5px 0px 15px 0px;
+  list-style: none;
 }
 
-.noticias p{
+/* Media */
+@media (width < 1024px) {
+  .noticias p {
     padding: 0px 0px 25px 0px; /* Aplica a todos los párrafos de la sección */
-    font-size: 25px;
-}
-
-.noticias h3{
-    font-size: 45px; /* Subtítulo */
-    padding: 50px 0px 0px 0px;
-}
-
-.noticias ul, .noticias ol{ /* Aplica a todas las listas de la sección */
+    font-size: 20px;
+  }
+  .noticias ul, .noticias ol { /* Aplica a todas las listas de la sección */
     font-size: 25px;
     color: rgb(0, 0, 0);
     padding: 5px 0px 15px 0px;
-    list-style: none;
+  }
+}
+.bento-main {
+  background-color: rgb(255, 225, 225);
+  padding: 40px 0px;
+  margin: 50px 0px;
+  border-radius: 10px;
+  border: 4px solid rgb(197, 155, 155);
+}
+
+.section-bentogrids {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 400px));
+  grid-template-rows: repeat(12, 100px);
+  justify-content: center;
+  gap: 20px;
+}
+.section-bentogrids .bento {
+  padding: 20px;
+  background-color: rgb(198, 104, 241);
+  border-radius: 12px;
+  border: 3px solid salmon;
+  /* Hover */
+}
+.section-bentogrids .bento p {
+  padding-top: 15px;
+  font-size: 18px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.section-bentogrids .bento li {
+  font-size: 18px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.section-bentogrids .bento:nth-child(1) {
+  grid-area: 3/1/5/4;
+}
+.section-bentogrids .bento:nth-child(1) img {
+  width: 100%;
+  height: 100%;
+}
+.section-bentogrids .bento:nth-child(2) {
+  grid-area: 1/1/3/4;
+  text-align: center;
+}
+.section-bentogrids .bento:nth-child(3) {
+  grid-area: 5/1/7/4;
+}
+.section-bentogrids .bento:nth-child(4) {
+  grid-area: 7/1/9/4;
+}
+.section-bentogrids .bento:nth-child(5) {
+  grid-area: 9/1/11/4;
+}
+.section-bentogrids .bento:nth-child(6) {
+  grid-area: 11/1/13/4;
+}
+/* Media */
+@media (min-width: 992px) {
+  .section-bentogrids {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 400px));
+    grid-template-rows: repeat(5, 100px);
+    justify-content: center;
+    gap: 20px;
+  }
+  .section-bentogrids .bento {
+    padding: 20px;
+    background-color: rgb(184, 87, 230);
+    border-radius: 10px;
+    border: 3px solid salmon;
+  }
+  .section-bentogrids .bento:nth-child(1) {
+    grid-area: 3/3/4/2;
+  }
+  .section-bentogrids .bento:nth-child(1) img {
+    width: 100%;
+    height: 100%;
+    scale: 2;
+  }
+  .section-bentogrids .bento:nth-child(2) {
+    grid-area: 1/1/3/2;
+    text-align: center;
+  }
+  .section-bentogrids .bento:nth-child(3) {
+    grid-area: 1/2/3/2;
+  }
+  .section-bentogrids .bento:nth-child(4) {
+    grid-area: 3/1/6/1;
+  }
+  .section-bentogrids .bento:nth-child(5) {
+    grid-area: 4/2/6/4;
+  }
+  .section-bentogrids .bento:nth-child(6) {
+    grid-area: 1/3/4/3;
+  }
+}
+/* -------------------------------- Página 1 -------------------------------- */
+/* Sección Categorías */
+.categorias-p2 { /* Categorías */
+  font-family: "Courier New", Courier, monospace;
+  padding: 40px 0px;
+  background-color: #c4fc43;
+  height: auto;
+}
+.categorias-p2 h2 { /* Título */
+  font-size: 45px;
+  text-align: center;
+  padding: 0px 0px 25px 0px;
+}
+.categorias-p2 nav { /* Menú */
+  text-align: center;
+  padding: 0px 0px 15px 0px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  gap: 5px;
+}
+.categorias-p2 nav a { /* Enlaces */
+  text-decoration: none; /* Quitamos el subrayado de los enlaces */
+  color: rgb(255, 255, 255); /* Color de los enlaces */
+  font-size: 20px; /* Tamaño del texto de los enlaces */
+  font-weight: bold; /* Grosor del texto de los enlaces */
+  background-color: rgb(255, 27, 27); /* Color de fondo de los enlaces */
+  margin: 10px 0px;
+  padding: 5px 5px 5px 5px; /* Espaciado interior de los enlaces */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambiamos el cursor al pasar por encima */
+}
+.categorias-p2 nav a:hover { /* Efecto hover */
+  margin: 10px 0px;
+  background-color: rgb(255, 255, 255); /* Cambiamos el color de fondo al pasar por encima */
+  color: black; /* Cambiamos el color del texto al pasar por encima */
+  text-decoration: underline; /* Subrayamos el texto al pasar por encima */
+  text-underline-offset: 4px; /* Añadimos un margen al subrayado */
+  text-decoration-thickness: 2px; /* Grosor del subrayado */
 }
 
 /* Media */
-
-@media (width < 1024px){
-    .noticias p{
-        padding: 0px 0px 25px 0px; /* Aplica a todos los párrafos de la sección */
-        font-size: 20px;
-    }
-    .noticias ul, .noticias ol{ /* Aplica a todas las listas de la sección */
-        font-size: 25px;
-        color: rgb(0, 0, 0);
-        padding: 5px 0px 15px 0px;
-    }
+@media (min-width: 992px) {
+  .categorias-p2 { /* Categorías */
+    border-radius: 25px;
+  }
+}
+@media (min-width: 768px) {
+  .categorias-p2 {
+    font-size: 20px;
+  }
+}
+/* Sección Barra Lateral */
+.barra-lateral-1-p2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(8vw, 1fr));
+  grid-template-rows: repeat(2, 80px);
+  gap: 5px;
+  margin: 25px 0px;
+  justify-content: center;
 }
 
+.barra-lateral-2-p2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+  border-radius: 25px;
+}
+.barra-lateral-2-p2 img {
+  width: 60px;
+}
 
-
+/* Sección Historias */
+.historia-p2 h1 { /* Título */
+  font-size: 40px;
+  text-align: center;
+  text-decoration: underline 3px;
+  padding: 25px 0px 15px 0px;
+}
+.historia-p2 ul { /* Lista */
+  width: 85%;
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+}
+.historia-p2 h3 { /* Subtítulo */
+  font-size: 25px;
+  text-align: center;
+  padding: 15px 0px 20px 0px;
+}
+.historia-p2 p { /* Párrafos */
+  font-size: 18px;
+  text-align: justify;
+  padding: 0px 0px 20px 0px;
+}
 
 /* -------------------------------- Página 2 -------------------------------- */
-
-/* -------------------------------- Menú Categorías -------------------------------- */
-
-.categorias-p2{ /* Categorías */
-    font-family: 'Courier New', Courier, monospace;
-    padding: 40px 0px;
-    background-color: #c4fc43;
-    height: auto;
+/* Sección Consejos */
+.consejos-p3 {
+  margin: 0;
+  background-color: rgb(245, 215, 179); /* Color de fondo de la sección */
+  padding: 70px 25px 70px 25px; /* Espaciado interior de la sección */
 }
-
-.categorias-p2 h2{ /* Título */
-    font-size: 45px;
-    text-align: center;
-    padding: 0px 0px 25px 0px;
+.consejos-p3 h1 { /* Título */
+  font-family: "Poppins", serif;
+  font-size: 40px;
+  text-align: center;
+  padding: 0;
 }
-
-.categorias-p2 nav{ /* Menú */
-    text-align: center;
-    padding: 0px 0px 15px 0px;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(100px, 1fr));
-    gap: 5px;
+.consejos-p3 p { /* Párrafos */
+  font-size: 18px;
+  text-align: center;
+  padding: 5px 0px 5px 0px;
 }
-
-.categorias-p2 a{ /* Enlaces */
-    text-decoration: none; /* Quitamos el subrayado de los enlaces */
-    color: rgb(255, 255, 255);   /* Color de los enlaces */
-    font-size: 20px;    /* Tamaño del texto de los enlaces */
-    font-weight: bold; /* Grosor del texto de los enlaces */
-    background-color: rgb(255, 27, 27);   /* Color de fondo de los enlaces */
-    margin: 10px 0px;
-    padding: 5px 5px 5px 5px;   /* Espaciado interior de los enlaces */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer;    /* Cambiamos el cursor al pasar por encima */   
+.consejos-p3 img { /* Imagen */
+  display: block;
+  margin: 50px auto 50px auto;
+  border-radius: 25px;
 }
-
-.categorias-p2 a:hover{ /* Efecto hover */
-    margin: 10px 0px;
-    background-color: rgb(255, 255, 255); /* Cambiamos el color de fondo al pasar por encima */
-    color: black;  /* Cambiamos el color del texto al pasar por encima */
-    text-decoration: underline; /* Subrayamos el texto al pasar por encima */
-    text-underline-offset: 4px; /* Añadimos un margen al subrayado */
-    text-decoration-thickness: 2px;  /* Grosor del subrayado */
-}
-
-/* Media */
-
-@media (min-width: 992px){
-    .categorias-p2{ /* Categorías */
-        border-radius: 25px;
-    }
-}
-
-@media (min-width: 768px){
-    .categorias-p2{
-        font-size: 20px;
-    }
-}
-
-
-/* Grid SideBar */
-
-.barra-lateral-1-p2{
-    display: grid;
-    grid-template-columns: repeat(2, minmax(8vw, 1fr));
-    grid-template-rows: repeat(2, 80px);
-    gap: 5px;
-    margin: 25px 0px;
-    justify-content: center;
-    
-}
-
-.barra-lateral-2-p2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: blue;
-    border-radius: 25px;
-    
-    
-}
-
-.barra-lateral-2-p2 img{
-    width: 60px;
-    
-}
-
-
-
-
-/* Historia de las recetas más conocidas */
-
-.historia-p2 h1{ /* Título */
-    font-size: 40px;
-    text-align: center;
-    text-decoration: underline 3px;
-    padding: 25px 0px 15px 0px;
-}
-
-.historia-p2 ul{ /* Lista */
-    padding: 0;
-    margin: 0 auto;
-    list-style: none;
-}
-
-.historia-p2 h3{ /* Subtítulo */
-    font-size: 25px;
-    text-align: center;
-    padding: 15px 0px 20px 0px;
-}
-
-.historia-p2 p{  /* Párrafos */
-    font-size: 18px;
-    text-align: justify;
-    padding: 0px 0px 20px 0px;
-}
-
-
-
-
-
-
-
-/*------------------ Página 3 -------------------------- */
-
-
-/* Introduccion a la página 3 */
-
-.consejos-p3{ /* Consejos */
-    margin: 0;
-    background-color: rgb(245, 215, 179); /* Color de fondo de la sección */ 
-    padding: 70px 25px 70px 25px; /* Espaciado interior de la sección */
-}
-
-.consejos-p3 h1{ /* Título */
-    font-family: "Poppins", serif;
-    font-size: 35px;
-    text-align: center;
-    padding: 0;
-}
-
-.consejos-p3 p{ /* Párrafos */
-    font-size: 18px;
-    text-align: center;
-    padding: 5px 0px 5px 0px;
-}
-
-.consejos-p3 img{ /* Imagen */
-    display: block;
-    margin: 50px auto 50px auto;
-    border-radius: 25px;
-}
-
 
 /* Tabla Recomendaciones  */
-
-.tabla-consejos-p3 { /* Tabla */ 
-    margin: 0 auto;
-    padding: 0px 0px 72px 0px;
-    list-style: none;
+.tabla-consejos-p3 { /* Tabla */
+  margin: 0 auto;
+  padding: 0px 0px 72px 0px;
+  list-style: none;
 }
-
 .tabla-consejos-p3 h2 { /* Títulos */
-    font-size: 23px;
-    font-family: "Poppins", serif;
-    text-align: center;
-    margin: 0;
-    padding: 25px 0px 10px 0px;
+  font-size: 23px;
+  font-family: "Poppins", serif;
+  text-align: center;
+  margin: 0;
+  padding: 25px 0px 10px 0px;
+}
+.tabla-consejos-p3 p { /* Párrafos */
+  color: rgb(14, 14, 102);
+  font-size: 18px;
+  padding: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.tabla-consejos-p3 p{ /* Párrafos */
-    color: rgb(14, 14, 102);
-    font-size: 18px;
-    padding: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+/* Sección Articulos de Cocina */
+.articulos-cocina-p3 { /* Artículos de Cocina */
+  padding: 100px 0px 100px 0px;
+  background-color: #FADA7A;
+  text-align: center;
+}
+.articulos-cocina-p3 h2 { /* Artículos de Cocina Título */
+  font-size: 50px;
+  text-decoration: underline 3px;
+  padding: 0px 0px 20px 0px;
+}
+.articulos-cocina-p3 h3 { /* Subtítulos */
+  padding: 15px 0px 10px 0px;
+  font-size: 25px;
+  text-decoration: underline 2px;
+}
+.articulos-cocina-p3 li { /* Datos */
+  list-style: none;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  padding: 5px;
 }
 
-
-
-/* Articulos de Cocina */
-
-.articulos-cocina-p3{ /* Artículos de Cocina */
-    padding: 100px 0px 100px 0px;
-    background-color: #FADA7A;
-    text-align: center;
+.tarjetas {
+  display: flex;
+  flex-direction: column;
+  background-color: #FCE7C8;
+  margin: 20px auto;
+  border-radius: 25px;
 }
 
-.articulos-cocina-p3 h2{  /* Artículos de Cocina Título */
-    font-size: 50px;
-    text-decoration: underline 3px;
-    padding: 0px 0px 20px 0px;
+/* -------------------------------- Página 3 -------------------------------- */
+/* Sección Inicio */
+.inicio-p4 {
+  display: block;
+  height: 200px;
+  align-content: center;
+  padding: 50px 0px 50px 350px;
+}
+.inicio-p4 h1 {
+  font-size: 86px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 100;
+  color: black;
 }
 
-.articulos-cocina-p3 h3{ /* Subtítulos */
-    padding: 15px 0px 10px 0px;
-    font-size: 25px;
-    text-decoration: underline 2px;
+/* Sección Contacto Informacón */
+.icons-p4 {
+  padding: 0;
+  background-color: wheat;
+  box-shadow: 0px 2px 27px 10px rgba(0, 0, 0, 0.3);
+  padding: 20px 0px 50px 0px;
 }
 
-.tarjetas{
-    display: flex;
-    flex-direction: column;
-    background-color: #FCE7C8;
-    margin: 20px auto;
-    border-radius: 25px;
+.icons-2-p4 {
+  font-family: "Courier New", Courier, monospace;
+}
+.icons-2-p4 samp {
+  font-size: 16px;
+}
+.icons-2-p4 h2 {
+  font-size: 45px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  margin: 10px 0px;
 }
 
-.articulos-cocina-p3 ul li{ /* Datos */
-    list-style: none;
-    font-size: 20px;
-    color: rgb(0, 0, 0);
-    padding: 5px;
+.icons-3-p4 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, auto);
+  gap: 20px;
 }
 
-
-
-
-/* ---------------------Página 4----------------------- */
-
-/* Bienvenida Iconos de Contacto */
-
-.icons-p4{
-    padding: 0;
-    background-color: wheat;
-    box-shadow: 0px 2px 27px 10px rgba(0, 0, 0, 0.3);
-    padding: 20px 0px 50px 0px;
+.icons-4-p4 {
+  padding: 25px;
+  margin: 0 auto;
+  width: 50%;
+  height: auto;
+  background-color: white;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0px 0px 40px -9px black;
+  border: 1px solid black;
+  transition: 0.3s ease;
+}
+.icons-4-p4 img {
+  width: 40%;
+  height: auto;
+  background-color: #e09900;
+  padding: 10px;
+  border-radius: 15px;
 }
 
-.inicio-p4{
-    display: block;
-    height: 200px;
-    align-content: center;
-    padding: 50px 0px 50px 350px;
+.icons-4-p4:last-child p {
+  font-size: 14px;
+  word-wrap: break-word;
 }
 
-.inicio-p4 h1{
-    font-size: 86px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 100;
-    color: black;
+.icons-4-p4:hover {
+  /* Animación de _variables*/
+  box-shadow: 0px 0px 40px -9px rgb(191, 252, 26);
+  border: 1px solid rgb(217, 255, 0);
 }
 
-.icons-2-p4{
-    font-family: 'Courier New', Courier, monospace;
+/* Media */
+@media (min-width: 768px) {
+  .icons-3-p4 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 50px;
+  }
+  .icons-4-p4 {
+    width: 70%;
+  }
 }
-
-.icons-2-p4 samp{
-    font-size: 16px;
-}
-
-.icons-2-p4 h2{
-    font-size: 45px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin: 10px 0px;
-}
-
-.icons-3-p4{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, auto);
-    gap: 20px;
-}
-
-.icons-4-p4{
-    padding: 25px;
+@media (min-width: 1245px) {
+  .icons-p4 {
+    max-width: 90%;
     margin: 0 auto;
-    width: 50%;
-    height: auto;
-    background-color: white;
-    text-align: center;
-    border-radius: 15px;
-    box-shadow: 0px 0px 40px -9px black;
-    border: 1px solid black;
+    padding: 50px 80px 50px 80px !important; /* La clase row de bootstrap pone un padding de .5 rem y no deja poner este padding por eso el !important */
+    background-color: wheat;
+    border-radius: 25px 25px 0px 0px;
+    box-shadow: 0px 2px 27px 10px rgba(0, 0, 0, 0.3);
+  }
+  .icons-3-p4 {
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    grid-template-rows: auto;
+    gap: 50px;
+  }
+  .icons-4-p4 {
+    width: 100%;
+  }
+}
+/* Sección Formulario */
+.form-p4 {
+  background-color: #4c523e;
+  padding: 25px;
+  color: wheat;
+  box-shadow: 0px 0px 40px -9px rgb(214, 161, 16);
+  display: grid;
+  border-radius: 25px;
+  justify-content: center;
+  grid-template-columns: repeat(2, minmax(130px, 1fr));
+  grid-template-rows: repeat(4, 30px);
+  column-gap: 10px;
+  row-gap: 10px;
+  grid-template-areas: "nombre apellido" "input-n input-a" "email form" "input-e form-input" "form-imput-1 .";
+}
+.form-p4 label:nth-child(1) {
+  grid-area: nombre;
+  font-size: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 900;
+}
+.form-p4 input:nth-child(2) {
+  grid-area: input-n;
+  border-radius: 15px;
+  background-color: #e09900;
+}
+.form-p4 label:nth-child(3) {
+  grid-area: apellido;
+  font-size: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 900;
+}
+.form-p4 input:nth-child(4) {
+  grid-area: input-a;
+  border-radius: 15px;
+  background-color: #e09900;
+}
+.form-p4 label:nth-child(5) {
+  grid-area: email;
+  font-size: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 900;
+}
+.form-p4 input:nth-child(6) {
+  grid-area: input-e;
+  border-radius: 15px;
+  background-color: #e09900;
+}
+.form-p4 label:nth-child(7) {
+  grid-area: form;
+  font-size: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 900;
+}
+.form-p4 input:nth-child(8) {
+  grid-area: form-input;
+}
+.form-p4 input:last-child {
+  grid-area: form-imput-1;
+  grid-column: 1/3;
+  background-color: #e09900;
+  border-radius: 25px;
+  padding: 5px;
+  margin: 15px 0px;
+  box-shadow: 0px 0px 40px -9px rgb(214, 161, 16);
 }
 
-.icons-4-p4:last-child p{
-    font-size: 14px;
-    word-wrap: break-word;
-    
+/* Sección Ubicación */
+.info-p4 {
+  margin: 0px auto 0px auto;
+  padding: 25px 0px 50px 0px;
+  background-color: black;
+}
+.info-p4 h2 {
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  text-decoration: underline;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.info-p4 p {
+  text-align: center;
+  color: aliceblue;
+  font-size: 17px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.info-p4 img {
+  display: block;
+  margin: 25px auto 0px auto;
+  width: 80%;
+  border-radius: 25px;
+  box-shadow: 0px 0px 40px -9px rgb(214, 161, 16);
+  height: auto;
 }
 
-.icons-4-p4 img{
+/* Media */
+@media (min-width: 768px) {
+  .info-p4 img {
+    width: 60%;
+  }
+}
+@media (min-width: 1200px) {
+  .info-p4 img {
     width: 40%;
-    height: auto;
-    background-color: #e09900;
-    padding: 10px;
-    border-radius: 15px;
+  }
+}
+.historia-p5 { /* Historia */
+  text-align: center;
+  padding: 50px 0px;
+  margin: 0px 40px;
+}
+.historia-p5 h1 { /* Título */
+  font-size: 50px;
+  font-family: "Sedgwick Ave Display", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(204, 120, 10);
+  text-decoration: underline 2px;
+  padding: 0px 0px 20px 0px;
+}
+.historia-p5 p { /* Párrafo */
+  font-size: 17px;
+  text-align: justify;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  padding: 0px 0px 20px 0px;
+}
+.historia-p5 a { /* Enlace */
+  background-color: red;
+  color: white;
+  text-decoration: none;
+  font-size: large;
+  font-family: "Sedgwick Ave Display", cursive;
+  font-weight: 400;
+  font-style: normal;
+  display: inline-block;
+  padding: 20px 40px;
+  margin: 20px 0px;
 }
 
-/* Media */
-@media (min-width:1245px){
-
-    .icons-p4{
-        max-width: 90%;
-        margin: 0 auto;
-        padding: 50px 80px 50px 80px !important; /* La clase row de bootstrap pone un padding de .5 rem y no deja poner este padding por eso el !important */
-        background-color: wheat;
-        border-radius: 25px 25px 0px 0px;
-        box-shadow: 0px 2px 27px 10px rgba(0, 0, 0, 0.3);
-    }
+.equipo-p5 { /* Equipo */
+  padding: 50px 0px 50px 0px;
+  background-color: #FADA7A;
+  text-align: center;
+}
+.equipo-p5 h2 { /* Título */
+  font-size: 72px;
+  color: rgb(204, 120, 10);
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: italic;
+  text-decoration: underline 1px;
+  padding: 0px 0px 20px 0px;
+}
+.equipo-p5 p { /* Párrafo */
+  font-family: "Poppins", serif;
+  font-size: 20px;
+  padding: 0px 0px 25px 0px;
+}
+.equipo-p5 table { /* Tabla */
+  margin: 25px auto 25px auto; /* Margen */
+}
+.equipo-p5 table tr { /* Fila */
+  background-color: #FCE7C8; /* Color de fondo */
+}
+.equipo-p5 table th { /* Cabecera */
+  padding: 15px 10px 15px 10px; /* Espaciado interior de las celdas */
+  background-color: rgb(158, 173, 68); /* Color de fondo */
+  font-family: "Poppins", serif; /* Fuente */
+  font-size: 25px; /* Tamaño de la fuente */
+  font-weight: 800; /* Peso de la fuente */
+  width: 200px; /* Ancho de las celdas */
+}
+.equipo-p5 table td { /* Datos */
+  font-family: "Poppins", serif; /* Fuente */
+  font-size: 15px; /* Tamaño de la fuente */
+  font-weight: 300; /* Peso de la fuente */
+  padding: 15px 10px 15px 10px; /* Espaciado interior de las celdas */
+  width: 200px; /* Ancho de las celdas */
+}
+.equipo-p5 table td a {
+  color: black;
+  font-weight: 800;
+  background-color: rgb(216, 70, 70);
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 10px;
+  border: 2px solid black;
 }
 
-@media (min-width:768px){
-
-    .icons-3-p4{
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto;
-        gap: 50px;
-    }
-
-    .icons-4-p4{
-        width: 70%;
-    }
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (min-width:1245px){
-
-    .icons-3-p4{
-        grid-template-columns: repeat(4, minmax(200px, 1fr));
-        grid-template-rows: auto;
-        gap: 50px;
-    }
-
-    .icons-4-p4{
-        width: 100%;
-    }
+:root {
+  --main-color: blue; /* Color principal por defecto */
+  --background-color: #FCE7C8; /* Fondo por defecto */
+  --text-color: rgb(255, 255, 255); /* Texto por defecto */
 }
 
-
-
-/* Formulario */
-
-.form-p4{
-    background-color: #4c523e;
-    padding: 25px;
-    color: wheat;
-    box-shadow: 0px 0px 40px -9px rgb(214, 161, 16);
-    display: grid;
-    border-radius: 25px;
-    justify-content: center;
-    grid-template-columns: repeat(2, minmax(130px, 1fr));
-    grid-template-rows: repeat(4 , 30px);
-    column-gap: 10px;
-    row-gap: 10px;
-    grid-template-areas: 
-    "nombre apellido"
-    "input-n input-a"
-    "email form"
-    "input-e form-input"
-    "form-imput-1 .";
+body {
+  background-color: var(--background-color) !important; /* Bootstrap tiene una clase que superpone esta orden */
 }
 
-/* Conexiónes */
-
-.form-p4 label:nth-child(1){
-    grid-area: nombre;
-    font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 900;
-}
-
-.form-p4 input:nth-child(2){
-    grid-area: input-n;
-    border-radius: 15px;
-    background-color: #e09900;
-}
-
-.form-p4 label:nth-child(3){
-    grid-area: apellido;
-    font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 900;
-}
-
-.form-p4 input:nth-child(4){
-    grid-area: input-a;
-    border-radius: 15px;
-    background-color: #e09900;
-}
-
-.form-p4 label:nth-child(5){
-    grid-area: email;
-    font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 900;
-}
-
-.form-p4 input:nth-child(6){
-    grid-area: input-e;
-    border-radius: 15px;
-    background-color: #e09900;
-}
-
-.form-p4 label:nth-child(7){
-    grid-area: form;
-    font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 900;
-}
-
-.form-p4 input:nth-child(8){
-    grid-area: form-input;
-}
-
-.form-p4 input:last-child{
-    grid-area: form-imput-1;
-    grid-column: 1 / 3;
-    background-color: #e09900;
-    border-radius: 25px;
-    padding: 5px;
-    margin: 15px 0px;
-    box-shadow: 0px 0px 40px -9px rgb(214, 161, 16);
-}
-
-
-
-
-/* Ubicación */
-
-.info-p4{
-    margin: 0px auto 0px auto;
-    padding: 25px 0px 50px 0px;
-    background-color: black;
-}
-
-.info-p4 h2{
-    font-size: 50px;
-    color: white;
-    text-align: center;
-    text-decoration: underline;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.info-p4 p{
-    text-align: center;
-    color: aliceblue;
-    font-size: 17px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-.info-p4 img{
-    display: block;
-    margin: 25px auto 0px auto;
-    width: 80%;
-    border-radius: 25px;
-    box-shadow: 0px 0px 40px -9px rgb(214, 161, 16);
-    height: auto;
-    
-}
-
-/* Media */
-
-@media (min-width:768px){
-    .info-p4 img{
-        width: 60%;
-    }
-}
-
-@media (min-width:1200px){
-    .info-p4 img{
-        width: 40%;
-    }
-}
-
-/*---------------------- Página 5 ------------------------------ */
-
-
-/* Introduccion a la página 5 */
-
-.historia-p5{ /* Historia */
-    text-align: center;
-    padding: 25px 0px 25px 0px;
-    margin: 0px 40px 0px 40px;
-}
-
-.historia-p5 h1{ /* Título */
-    font-size: 40px;
-    text-decoration: underline 2px;
-    padding: 0px 0px 20px 0px;
-}
-
-.historia-p5 p{ /* Párrafo */
-    font-size: 17px;
-    text-align: justify;
-    padding: 0px 0px 20px 0px;
-}
-
-/* Nuestro Equipo */
-
-.equipo-p5{ /* Equipo */
-    padding: 50px 0px 50px 0px;
-    background-color: #FADA7A;
-    text-align: center;
-}
-
-.equipo-p5 h2{ /* Título */
-    font-size: 72px;
-    font-family: "Poppins", serif;
-    font-weight: 100;
-    font-style: italic;
-    text-decoration: underline 1px;
-    padding: 0px 0px 20px 0px;
-}
-
-.equipo-p5 p{ /* Párrafo */
-    font-family: "Poppins", serif; 
-    font-size: 20px; 
-    padding: 0px 0px 25px 0px; 
-}
-
-.equipo-p5 table {  /* Tabla */
-    margin: 25px auto 25px auto; /* Margen */
-}
-
-.equipo-p5 tr { /* Fila */
-    background-color: #FCE7C8; /* Color de fondo */
-}
-.equipo-p5 th{ /* Cabecera */
-    padding: 15px 10px 15px 10px; /* Espaciado interior de las celdas */
-    background-color: brown;  /* Color de fondo */
-    font-family: "Poppins", serif; /* Fuente */
-    font-size: 25px; /* Tamaño de la fuente */
-    font-weight: 800; /* Peso de la fuente */
-    width: 200px; /* Ancho de las celdas */
-}
-
-.equipo-p5 td{ /* Datos */
-    font-family: "Poppins", serif; /* Fuente */
-    font-size: 15px; /* Tamaño de la fuente */
-    font-weight: 300; /* Peso de la fuente */
-    padding: 15px 10px 15px 10px; /* Espaciado interior de las celdas */
-    width: 200px; /* Ancho de las celdas */
-}
+/*# sourceMappingURL=style.css.map */
