@@ -13,7 +13,7 @@
     ul{
         display: flex;
         flex-direction: row;
-        margin: 0;
+        padding: 0px !important; /* Bootstrap pone por defecto al ul 2 rem de padding y me jode el diseño al no dejarlo centrado */
         li{
             margin: 0px 10px 20px 10px;
             list-style: none;
