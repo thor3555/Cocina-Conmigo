@@ -10,7 +10,7 @@
   animation: balance 1s;
 }
 
-.bento-anim, .section-bentogrids .bento:hover {
+.bento-anim, .barra-lateral-1-p2 .barra-lateral-2-p2:hover, .section-bentogrids .bento:hover {
   animation: bento 2s ease;
   border: 3px solid white;
   transition: transform 1s ease;
@@ -498,18 +498,16 @@ footer a {
   margin: 25px 0px;
   justify-content: center;
 }
-
-.barra-lateral-2-p2 {
+.barra-lateral-1-p2 .barra-lateral-2-p2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: blue;
+  background: linear-gradient(to right, red, blue);
   border-radius: 25px;
 }
-.barra-lateral-2-p2 img {
+.barra-lateral-1-p2 .barra-lateral-2-p2 img {
   width: 60px;
 }
-
 /* Sección Historias */
 .historia-p2 h1 { /* Título */
   font-size: 40px;
@@ -593,6 +591,7 @@ footer a {
   padding: 15px 0px 10px 0px;
   font-size: 25px;
   text-decoration: underline 2px;
+  word-wrap: break-word;
 }
 .articulos-cocina-p3 li { /* Datos */
   list-style: none;
