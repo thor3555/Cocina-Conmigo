@@ -1,3 +1,8 @@
+///
+@use "../../components/variables" as v;
+/// 
+
+
 /* Sección Barra Lateral */
 
 .barra-lateral-1-p2{
@@ -8,17 +13,20 @@
     margin: 25px 0px;
     justify-content: center;
     
-}
 
 .barra-lateral-2-p2{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: blue;
+    background: linear-gradient(to right, red, blue);
     border-radius: 25px;
-    img{
-        width: 60px;
-        
+        img{
+            width: 60px;
+            
+        }
+        &:hover{
+            @extend .bento-anim;
+        }
     }
 }
 
