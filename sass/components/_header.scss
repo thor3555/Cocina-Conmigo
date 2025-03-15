@@ -1,3 +1,7 @@
+///
+@use "variables" as v; 
+///
+
 /* Menú */
 header {
     position: fixed;
@@ -15,18 +19,9 @@ header {
 }
 
 .nav-brand-logo-per {
-    animation: girar 10s linear infinite;
-    animation-delay: 5s;
+    @extend .girar-logo;
 }
 
-
-@keyframes girar {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(360deg) scale(1.2); } /* Giro completo en la mitad del tiempo */
-    50% { transform: rotate(360deg); }
-    75% { transform: rotate(360deg); }
-    100% { transform: rotate(360deg); } /* Mantiene la posición durante la segunda mitad */
-}
 /* Media */
 
 @media (min-width: 992px) {
