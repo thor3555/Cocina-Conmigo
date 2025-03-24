@@ -1,10 +1,15 @@
+///
+@use "../../components/variables" as v;
+/// 
+
 /* Sección Articulos de Cocina */
 
 .articulos-cocina-p3{ /* Artículos de Cocina */
     padding: 100px 0px 100px 0px;
-    background-color: #FADA7A;
+    background-color: v.$two;
     text-align: center;
     h2{  /* Artículos de Cocina Título */
+        color: v.$five;
         font-size: 50px;
         text-decoration: underline 3px;
         padding: 0px 0px 20px 0px;

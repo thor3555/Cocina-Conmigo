@@ -8,15 +8,28 @@ header {
     width: 100%;
     z-index: 1000;
     top: 0; // Asegúrate de que el header esté en la parte superior
+    background-color: v.$one; // Color de fondo del header
 }
 
 .navbar-nav-per {
     justify-content: flex-end;
     font-size: 20px;
     text-align: center;
-    border-top: 2px solid orange;
-    
+    border-top: 2px solid v.$five;
+    font-weight: bold;
+    div{
+        .active{
+            color: v.$seven !important; // Necesario el important para sobrescribir estilos de Bootstrap //
+        }
+        a{
+            color: v.$six;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+    }
 }
+
 
 .nav-brand-logo-per {
     @extend .girar-logo;

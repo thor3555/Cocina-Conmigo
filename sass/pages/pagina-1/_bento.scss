@@ -4,7 +4,7 @@
 
 
 .bento-main{
-    background-color: rgb(255, 225, 225);
+    background-color: v.$five;
     padding: 40px 0px;
     margin: 50px 0px;
     @include v.borde-redondeado(10px, 4px solid rgb(197, 155, 155));
@@ -16,11 +16,10 @@
     grid-template-rows: repeat(12, 100px);
     justify-content: center;
     gap: 20px;
-
     .bento{
         padding: 20px;
-        background-color: rgb(198, 104, 241);
-        @include v.borde-redondeado(12px, 3px solid salmon);
+        background-color: v.$six;
+        @include v.borde-redondeado(12px, 3px solid v.$two);
         p{
             padding-top: 15px;
             font-size: 18px;
@@ -67,15 +66,8 @@
 /* Media */
 @media (min-width: 992px) {
     .section-bentogrids{
-        display: grid;
-        grid-template-columns: repeat(3, minmax(100px, 400px));
         grid-template-rows: repeat(5, 100px);
-        justify-content: center;
-        gap: 20px;
         .bento{
-            padding: 20px;
-            background-color: rgb(184, 87, 230);
-            @include v.borde-redondeado(10px, 3px solid salmon);
             &:nth-child(1){
                 grid-area: 3/ 3 / 4 / 2;
                 img{

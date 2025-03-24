@@ -6,7 +6,7 @@
 
 .icons-p4{
     padding: 0;
-    background-color: wheat;
+    background-color: v.$six;
     box-shadow: 0px 2px 27px 10px rgba(0, 0, 0, 0.3);
     padding: 20px 0px 50px 0px;
 }
@@ -58,8 +58,8 @@
 
 .icons-4-p4:hover{
     @extend .balance; /* Animación de _variables*/
-    box-shadow: 0px 0px 40px -9px rgb(191, 252, 26);
-    border: 1px solid rgb(217, 255, 0);
+    box-shadow: 0px 0px 40px -9px v.$two;
+    border: 1px solid v.$two;
     
 }
 
@@ -82,7 +82,6 @@
         max-width: 90%;
         margin: 0 auto;
         padding: 50px 80px 50px 80px !important; /* La clase row de bootstrap pone un padding de .5 rem y no deja poner este padding por eso el !important */
-        background-color: wheat;
         border-radius: 25px 25px 0px 0px;
         box-shadow: 0px 2px 27px 10px rgba(0, 0, 0, 0.3);
     }

@@ -1,9 +1,13 @@
+///
+@use "../../components/variables" as v;
+/// 
+
 /* Sección Categorías */
 
 .categorias-p2{ /* Categorías */
     font-family: 'Courier New', Courier, monospace;
     padding: 40px 0px;
-    background-color: #c4fc43;
+    background-color: v.$three;
     height: auto;
     h2{ /* Título */
         font-size: 45px;
@@ -18,10 +22,10 @@
         gap: 5px;
         a{ /* Enlaces */
             text-decoration: none; /* Quitamos el subrayado de los enlaces */
-            color: rgb(255, 255, 255);   /* Color de los enlaces */
+            color: v.$five;   /* Color de los enlaces */
             font-size: 20px;    /* Tamaño del texto de los enlaces */
             font-weight: bold; /* Grosor del texto de los enlaces */
-            background-color: rgb(255, 27, 27);   /* Color de fondo de los enlaces */
+            background-color: v.$two;   /* Color de fondo de los enlaces */
             margin: 10px 0px;
             padding: 5px 5px 5px 5px;   /* Espaciado interior de los enlaces */
             border-radius: 5px; /* Bordes redondeados */
@@ -29,7 +33,7 @@
         }
         a:hover{ /* Efecto hover */
             margin: 10px 0px;
-            background-color: rgb(255, 255, 255); /* Cambiamos el color de fondo al pasar por encima */
+            background-color: v.$five; /* Cambiamos el color de fondo al pasar por encima */
             color: black;  /* Cambiamos el color del texto al pasar por encima */
             text-decoration: underline; /* Subrayamos el texto al pasar por encima */
             text-underline-offset: 4px; /* Añadimos un margen al subrayado */
@@ -40,13 +44,6 @@
 }
 
 /* Media */
-
-@media (min-width: 992px){
-    .categorias-p2{ /* Categorías */
-        border-radius: 25px;
-    }
-}
-
 @media (min-width: 768px){
     .categorias-p2{
         font-size: 20px;

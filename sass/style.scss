@@ -1,5 +1,5 @@
 ///
-@use "components/variables";
+@use "components/variables" as v;
 @use "components/taskbar";
 @use "components/header";
 @use "components/footer";
@@ -17,6 +17,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 //Colores main//
 :root {
     --main-color: blue; /* Color principal por defecto */
@@ -25,5 +26,5 @@
 }
 
 body {
-    background-color: var(--background-color) !important; /* Bootstrap tiene una clase que superpone esta orden */
+    background-color: v.$two !important; /* Bootstrap tiene una clase que superpone esta orden */
 }

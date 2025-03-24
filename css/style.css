@@ -1,7 +1,7 @@
 @charset "UTF-8";
 .boton-enlace, .equipo-p5 table td a, .historia-p5 a {
-  background-color: rgb(158, 173, 68);
-  color: rgb(204, 120, 10);
+  background-color: #E76F51;
+  color: #F8EDEB;
   border-radius: 5px;
   border: 0px solid black;
   transition: 1s;
@@ -12,7 +12,7 @@
 
 .bento-anim, .barra-lateral-1-p2 .barra-lateral-2-p2:hover, .section-bentogrids .bento:hover {
   animation: bento 2s ease;
-  border: 3px solid white;
+  border: 3px solid #F8EDEB;
   transition: transform 1s ease;
   box-shadow: 0px 5px 15px rgba(255, 165, 0, 0.6);
 }
@@ -89,6 +89,7 @@
 }
 .taskbar ul li button {
   border: none;
+  background-color: #F8EDEB;
   border-radius: 50px;
   border: 2px solid rgb(240, 203, 203);
   box-shadow: 0px 0px 10px 0px rgb(240, 203, 203);
@@ -126,12 +127,11 @@
   }
 }
 button:hover {
-  background-color: rgb(218, 126, 126);
   transform: scale(1.1);
 }
 
 #noticias { /* Esto es para que al llevarte al la sección de bienvenida se vea correctamente */
-  padding-top: 150px;
+  padding-top: 100px;
 }
 
 #historia { /* Esto es para que al llevarte al la sección de bienvenida se vea correctamente */
@@ -159,7 +159,8 @@ button:hover {
     display: inline;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     font-size: 20px;
-    color: rgb(32, 211, 157);
+    font-weight: bold;
+    color: #E76F51;
   }
 }
 /* Menú */
@@ -168,13 +169,24 @@ header {
   width: 100%;
   z-index: 1000;
   top: 0;
+  background-color: #F4A261;
 }
 
 .navbar-nav-per {
   justify-content: flex-end;
   font-size: 20px;
   text-align: center;
-  border-top: 2px solid orange;
+  border-top: 2px solid #F8EDEB;
+  font-weight: bold;
+}
+.navbar-nav-per div .active {
+  color: black !important;
+}
+.navbar-nav-per div a {
+  color: wheat;
+}
+.navbar-nav-per div a:hover {
+  text-decoration: underline;
 }
 
 /* Media */
@@ -194,7 +206,7 @@ main {
 
 /* Footer */
 footer {
-  background-color: #ff901a;
+  background-color: #F4A261;
   padding: 25px 0px 120px 0px;
 }
 footer a {
@@ -208,14 +220,14 @@ footer a {
 
 /* Sección Bienvenida */
 .bienvenida {
-  color: var(--main-color);
   font-family: "Poppins", serif;
   text-align: center;
   padding: 50px 0px 100px 0px;
 }
 .bienvenida h1 {
   font-size: 45px;
-  color: rgb(55, 0, 255);
+  color: #F8EDEB;
+  font-weight: bold;
   text-decoration: underline 4px;
   padding: 0px 0px 15px 0px;
 }
@@ -223,7 +235,8 @@ footer a {
   font-size: 25px;
   text-decoration: underline 4px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  color: rgb(0, 255, 157);
+  font-weight: 700;
+  color: #F8EDEB;
 }
 .bienvenida img {
   width: 90%;
@@ -247,21 +260,22 @@ footer a {
 }
 /* Sección de recetas */
 .recetas {
-  color: var(--text-color); /* Color del texto de las recetas */
   font-family: "Courier New", Courier, monospace; /* Fuente */
   background-color: rgb(245, 215, 179); /* Color de fondo de la sección */
   padding: 100px 25px 100px 25px; /* Espaciado interior de la sección */
 }
 .recetas h2 {
-  color: black;
+  color: #F4A261;
   font-size: 50px;
+  font-weight: 600;
   text-align: center;
   padding: 0px 0px 15px 0px;
 }
 .recetas p {
-  font-size: 18px;
+  font-size: 20px;
   text-align: center;
-  color: black;
+  color: #2ca597;
+  font-weight: 600;
   padding: 0px 0px 25px 0px;
 }
 .recetas table {
@@ -272,7 +286,7 @@ footer a {
 .recetas table th {
   color: black;
   font-size: 15px;
-  background-color: aquamarine;
+  background-color: #2ca597;
   text-align: center;
   padding: 15px 22px 15px 22px;
   border-radius: 50px;
@@ -280,26 +294,27 @@ footer a {
 .recetas table td {
   color: black;
   font-size: 15px;
-  background-color: rgb(235, 173, 80); /* Aplica a toda la tabla */
+  background-color: #F8EDEB; /* Aplica a toda la tabla */
   padding: 15px 10px 15px 10px;
   border-radius: 10px;
 }
 .recetas table td.recename { /* Aplica solo a la clase recename, que es la que contiene el nombre de la receta */
-  background-color: rgb(236, 152, 79);
+  background-color: #F4A261;
 }
 
 /* Media */
-@media (min-width: 662px) {
+@media (min-width: 576px) {
+  .recetas {
+    border-radius: 25px;
+    border: 0px solid black;
+  }
   .recetas h2 {
-    color: black;
-    font-size: 35px;
+    font-size: 50px;
     text-align: center;
     padding: 0px 0px 15px 0px;
   }
   .recetas p {
-    font-size: 14px;
     text-align: center;
-    color: black;
     padding: 0px 0px 25px 0px;
   }
   .recetas table {
@@ -308,17 +323,19 @@ footer a {
 }
 /* Sección Noticias */
 .noticias {
-  padding: 100px 0px 100px 0px;
-  color: rgb(255, 255, 255);
+  margin-top: 50px;
+  background-color: #2ca597; /* Color de fondo de la sección */
+  padding: 0px 0px 100px 0px;
+  color: #F8EDEB; /* Color de texto */
   text-align: center;
 }
 .noticias h2 {
   font-size: 50px; /* Título */
-  padding: 0px 0px 20px 0px;
+  padding: 0px 0px 25px 0px;
 }
 .noticias p {
   padding: 0px 0px 25px 0px; /* Aplica a todos los párrafos de la sección */
-  font-size: 25px;
+  font-size: 20px;
 }
 .noticias h3 {
   font-size: 45px; /* Subtítulo */
@@ -327,25 +344,25 @@ footer a {
 
 .noticias ul, .noticias ol { /* Aplica a todas las listas de la sección */
   font-size: 25px;
-  color: rgb(0, 0, 0);
+  color: #264653;
   padding: 5px 0px 15px 0px;
   list-style: none;
 }
 
 /* Media */
-@media (width < 1024px) {
-  .noticias p {
-    padding: 0px 0px 25px 0px; /* Aplica a todos los párrafos de la sección */
-    font-size: 20px;
+@media (min-width: 576px) {
+  .noticias {
+    border-radius: 50px;
+    border: 1px solid #F8EDEB;
+    /* Borde redondeado */
   }
-  .noticias ul, .noticias ol { /* Aplica a todas las listas de la sección */
+  .noticias p {
+    padding: 0px 0px 20px 0px; /* Aplica a todos los párrafos de la sección */
     font-size: 25px;
-    color: rgb(0, 0, 0);
-    padding: 5px 0px 15px 0px;
   }
 }
 .bento-main {
-  background-color: rgb(255, 225, 225);
+  background-color: #F8EDEB;
   padding: 40px 0px;
   margin: 50px 0px;
   border-radius: 10px;
@@ -361,9 +378,9 @@ footer a {
 }
 .section-bentogrids .bento {
   padding: 20px;
-  background-color: rgb(198, 104, 241);
+  background-color: wheat;
   border-radius: 12px;
-  border: 3px solid salmon;
+  border: 3px solid #E76F51;
   /* Hover */
 }
 .section-bentogrids .bento p {
@@ -401,17 +418,7 @@ footer a {
 /* Media */
 @media (min-width: 992px) {
   .section-bentogrids {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(100px, 400px));
     grid-template-rows: repeat(5, 100px);
-    justify-content: center;
-    gap: 20px;
-  }
-  .section-bentogrids .bento {
-    padding: 20px;
-    background-color: rgb(184, 87, 230);
-    border-radius: 10px;
-    border: 3px solid salmon;
   }
   .section-bentogrids .bento:nth-child(1) {
     grid-area: 3/3/4/2;
@@ -443,7 +450,7 @@ footer a {
 .categorias-p2 { /* Categorías */
   font-family: "Courier New", Courier, monospace;
   padding: 40px 0px;
-  background-color: #c4fc43;
+  background-color: #2ca597;
   height: auto;
 }
 .categorias-p2 h2 { /* Título */
@@ -460,10 +467,10 @@ footer a {
 }
 .categorias-p2 nav a { /* Enlaces */
   text-decoration: none; /* Quitamos el subrayado de los enlaces */
-  color: rgb(255, 255, 255); /* Color de los enlaces */
+  color: #F8EDEB; /* Color de los enlaces */
   font-size: 20px; /* Tamaño del texto de los enlaces */
   font-weight: bold; /* Grosor del texto de los enlaces */
-  background-color: rgb(255, 27, 27); /* Color de fondo de los enlaces */
+  background-color: #E76F51; /* Color de fondo de los enlaces */
   margin: 10px 0px;
   padding: 5px 5px 5px 5px; /* Espaciado interior de los enlaces */
   border-radius: 5px; /* Bordes redondeados */
@@ -471,7 +478,7 @@ footer a {
 }
 .categorias-p2 nav a:hover { /* Efecto hover */
   margin: 10px 0px;
-  background-color: rgb(255, 255, 255); /* Cambiamos el color de fondo al pasar por encima */
+  background-color: #F8EDEB; /* Cambiamos el color de fondo al pasar por encima */
   color: black; /* Cambiamos el color del texto al pasar por encima */
   text-decoration: underline; /* Subrayamos el texto al pasar por encima */
   text-underline-offset: 4px; /* Añadimos un margen al subrayado */
@@ -479,11 +486,6 @@ footer a {
 }
 
 /* Media */
-@media (min-width: 992px) {
-  .categorias-p2 { /* Categorías */
-    border-radius: 25px;
-  }
-}
 @media (min-width: 768px) {
   .categorias-p2 {
     font-size: 20px;
@@ -579,10 +581,11 @@ footer a {
 /* Sección Articulos de Cocina */
 .articulos-cocina-p3 { /* Artículos de Cocina */
   padding: 100px 0px 100px 0px;
-  background-color: #FADA7A;
+  background-color: #E76F51;
   text-align: center;
 }
 .articulos-cocina-p3 h2 { /* Artículos de Cocina Título */
+  color: #F8EDEB;
   font-size: 50px;
   text-decoration: underline 3px;
   padding: 0px 0px 20px 0px;
@@ -677,8 +680,8 @@ footer a {
 
 .icons-4-p4:hover {
   /* Animación de _variables*/
-  box-shadow: 0px 0px 40px -9px rgb(191, 252, 26);
-  border: 1px solid rgb(217, 255, 0);
+  box-shadow: 0px 0px 40px -9px #E76F51;
+  border: 1px solid #E76F51;
 }
 
 /* Media */
@@ -697,7 +700,6 @@ footer a {
     max-width: 90%;
     margin: 0 auto;
     padding: 50px 80px 50px 80px !important; /* La clase row de bootstrap pone un padding de .5 rem y no deja poner este padding por eso el !important */
-    background-color: wheat;
     border-radius: 25px 25px 0px 0px;
     box-shadow: 0px 2px 27px 10px rgba(0, 0, 0, 0.3);
   }
@@ -826,7 +828,7 @@ footer a {
   font-family: "Sedgwick Ave Display", cursive;
   font-weight: 400;
   font-style: normal;
-  color: rgb(204, 120, 10);
+  color: black;
   text-decoration: underline 2px;
   padding: 0px 0px 20px 0px;
 }
@@ -851,13 +853,13 @@ footer a {
 }
 
 .equipo-p5 { /* Equipo */
-  padding: 50px 0px 50px 0px;
-  background-color: #FADA7A;
+  padding: 100px 0px 100px 0px;
+  background-color: wheat;
   text-align: center;
 }
 .equipo-p5 h2 { /* Título */
   font-size: 72px;
-  color: rgb(204, 120, 10);
+  color: #F4A261;
   font-family: "Poppins", serif;
   font-weight: 400;
   font-style: italic;
@@ -873,11 +875,11 @@ footer a {
   margin: 25px auto 25px auto; /* Margen */
 }
 .equipo-p5 table tr { /* Fila */
-  background-color: #FCE7C8; /* Color de fondo */
+  background-color: #F4A261; /* Color de fondo */
 }
 .equipo-p5 table th { /* Cabecera */
   padding: 15px 10px 15px 10px; /* Espaciado interior de las celdas */
-  background-color: rgb(158, 173, 68); /* Color de fondo */
+  background-color: #2ca597; /* Color de fondo */
   font-family: "Poppins", serif; /* Fuente */
   font-size: 25px; /* Tamaño de la fuente */
   font-weight: 800; /* Peso de la fuente */
@@ -893,7 +895,7 @@ footer a {
 .equipo-p5 table td a {
   color: black;
   font-weight: 800;
-  background-color: rgb(216, 70, 70);
+  background-color: #E76F51;
   display: inline-block;
   padding: 10px 30px;
   border-radius: 10px;
@@ -914,7 +916,7 @@ footer a {
 }
 
 body {
-  background-color: var(--background-color) !important; /* Bootstrap tiene una clase que superpone esta orden */
+  background-color: #E76F51 !important; /* Bootstrap tiene una clase que superpone esta orden */
 }
 
 /*# sourceMappingURL=style.css.map */

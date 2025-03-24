@@ -1,7 +1,11 @@
+///
+@use "variables" as v;
+/// 
+
 /* Footer */
 
 footer{
-    background-color: #ff901a;
+    background-color: v.$one;
     padding: 25px 0px 120px 0px;
     a{
         color: rgb(0, 0, 0);

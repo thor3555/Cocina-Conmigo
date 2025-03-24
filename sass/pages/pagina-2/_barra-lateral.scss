@@ -12,17 +12,15 @@
     gap: 5px;
     margin: 25px 0px;
     justify-content: center;
-    
 
-.barra-lateral-2-p2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to right, red, blue);
-    border-radius: 25px;
+    .barra-lateral-2-p2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to right, red, blue);
+        border-radius: 25px;
         img{
-            width: 60px;
-            
+            width: 60px;        
         }
         &:hover{
             @extend .bento-anim;

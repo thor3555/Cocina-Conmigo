@@ -1,9 +1,13 @@
 //Variables
 
-//Colores
-$titulos: rgb(204, 120, 10);
-$link: rgb(32, 211, 157);
-$fondos: rgb(158, 173, 68);
+// Colores
+$one: #F4A261; // 
+$two: #E76F51; // 
+$three: #2ca597; // 
+$four: #264653; // 
+$five: #F8EDEB; //
+$six: wheat; //  
+$seven: black; //
 
 
 @mixin borde-redondeado($radio, $border) {
@@ -12,8 +16,8 @@ $fondos: rgb(158, 173, 68);
 }
 
 .boton-enlace{
-    background-color: $fondos;
-    color: $titulos;
+    background-color: $two;
+    color: $five;
     @include borde-redondeado(5px, 0px solid black);
     transition: 1s;
     &:hover{
@@ -23,7 +27,7 @@ $fondos: rgb(158, 173, 68);
 
 .bento-anim{
     animation: bento 2s ease;
-    border: 3px solid white;
+    border: 3px solid $five;
     transition: transform 1s ease;
     box-shadow: 0px 5px 15px rgba(255, 165, 0, 0.6);
 }
