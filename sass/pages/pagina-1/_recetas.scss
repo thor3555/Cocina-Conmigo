@@ -6,10 +6,10 @@
 
 .recetas{
     font-family: 'Courier New', Courier, monospace; /* Fuente */
-    background-color: rgb(245, 215, 179); /* Color de fondo de la sección */
+    background-color: v.$four; /* Color de fondo de la sección */
     padding: 100px 25px 100px 25px; /* Espaciado interior de la sección */
     h2{
-        color: v.$one;
+        color: v.$three;
         font-size: 50px;
         font-weight: 600;
         text-align: center;
@@ -24,8 +24,8 @@
     }
     table{
         margin: 0 auto;
-        color: black; 
         width: 90%;
+        border: 0px solid rgba(0, 0, 0, 0); // La unica forma que logre para sacr el borde a la tabla//
         th{ 
             color: black;
             font-size: 15px;

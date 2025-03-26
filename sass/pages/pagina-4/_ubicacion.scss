@@ -1,9 +1,13 @@
+///
+@use "../../components/variables" as v;
+/// 
+
 /* Sección Ubicación */
 
 .info-p4{
     margin: 0px auto 0px auto;
     padding: 25px 0px 50px 0px;
-    background-color: black;
+    background-color: v.$five;
     h2{
         font-size: 50px;
         color: white;
@@ -31,12 +35,18 @@
 /* Media */
 
 @media (min-width:768px){
+    .info-p4{
+        margin: -40px auto 0px auto;
+    }
     .info-p4 img{
         width: 60%;
     }
 }
 
 @media (min-width:1200px){
+    .info-p4{
+        margin: -40px auto 0px auto;
+    }
     .info-p4 img{
         width: 40%;
     }

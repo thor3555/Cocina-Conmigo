@@ -4,11 +4,11 @@
 
 .equipo-p5{ /* Equipo */
     padding: 100px 0px 100px 0px;
-    background-color: v.$six;
+    background-color: v.$one;
     text-align: center;
     h2{ /* Título */
         font-size: 72px;
-        color: v.$one;
+        color: v.$five;
         font-family: "Poppins", serif;
         font-weight: 400;
         font-style: italic;
@@ -23,7 +23,7 @@
     table {  /* Tabla */
         margin: 25px auto 25px auto; /* Margen */
         tr { /* Fila */
-            background-color: v.$one; /* Color de fondo */
+            background-color: v.$two; /* Color de fondo */
         }
         th{ /* Cabecera */
             padding: 15px 10px 15px 10px; /* Espaciado interior de las celdas */
@@ -42,7 +42,7 @@
             a{
                 color: black;
                 font-weight: 800;
-                background-color: v.$two;
+                background-color: v.$four;
                 display: inline-block;
                 padding: 10px 30px;
                 @extend .boton-enlace;

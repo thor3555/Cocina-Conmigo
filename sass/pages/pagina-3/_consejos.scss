@@ -1,10 +1,14 @@
+///
+@use "../../components/variables" as v;
+/// 
+
 /* Sección Consejos */
 
 
 
 .consejos-p3{
     margin: 0;
-    background-color: rgb(245, 215, 179); /* Color de fondo de la sección */ 
+    background-color: v.$two; /* Color de fondo de la sección */ 
     padding: 70px 25px 70px 25px; /* Espaciado interior de la sección */
     h1{ /* Título */
         font-family: "Poppins", serif;
@@ -39,7 +43,8 @@
     }
     
     p{ /* Párrafos */
-        color: rgb(14, 14, 102);
+        color: v.$four;
+        font-weight: bold;
         font-size: 18px;
         padding: 0;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;

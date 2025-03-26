@@ -18,13 +18,6 @@
     box-sizing: border-box;
 }
 
-//Colores main//
-:root {
-    --main-color: blue; /* Color principal por defecto */
-    --background-color: #FCE7C8; /* Fondo por defecto */
-    --text-color: rgb(255, 255, 255); /* Texto por defecto */
-}
-
 body {
     background-color: v.$two !important; /* Bootstrap tiene una clase que superpone esta orden */
 }

@@ -8,7 +8,7 @@ header {
     width: 100%;
     z-index: 1000;
     top: 0; // Asegúrate de que el header esté en la parte superior
-    background-color: v.$one; // Color de fondo del header
+    background-color: v.$five; // Color de fondo del header
 }
 
 .navbar-nav-per {
@@ -19,12 +19,13 @@ header {
     font-weight: bold;
     div{
         .active{
-            color: v.$seven !important; // Necesario el important para sobrescribir estilos de Bootstrap //
+            color: v.$three !important; // Necesario el important para sobrescribir estilos de Bootstrap //
         }
         a{
-            color: v.$six;
+            color: v.$one;
         }
         a:hover{
+            color: v.$one;
             text-decoration: underline;
         }
     }
