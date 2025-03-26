@@ -176,7 +176,7 @@ header {
   justify-content: flex-end;
   font-size: 20px;
   text-align: center;
-  border-top: 2px solid #b38248;
+  border-top: 2px solid #eee4d2;
   font-weight: bold;
 }
 .navbar-nav-per div .active {
@@ -188,6 +188,10 @@ header {
 .navbar-nav-per div a:hover {
   color: #e1b07e;
   text-decoration: underline;
+}
+
+.bot-m {
+  background-color: #eee4d2 !important;
 }
 
 /* Media */
